@@ -637,8 +637,8 @@ pre tt:after {
 
 @font-face {
   font-family: iconfont;
-  src: url(../fonts/iconfont.eot);
-  src: url(../fonts/iconfont.eot?#iefix) format("embedded-opentype"),url(../fonts/iconfont.ttf) format("truetype"),url(../fonts/iconfont.svg#iconfont) format("svg");
+  src: url(/fonts/iconfont.eot);
+  src: url(/fonts/iconfont.eot?#iefix) format("embedded-opentype"),url(/fonts/iconfont.ttf) format("truetype"),url(/fonts/iconfont.svg#iconfont) format("svg");
 }
 
 .iconfont {
