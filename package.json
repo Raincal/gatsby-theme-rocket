@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-firekylin",
+  "description": "Gatsby Firekylin",
+  "version": "1.0.0",
+  "author": "Raincal <raincal.chen@gmail.com>",
+  "dependencies": {
+    "dayjs": "^1.5.16",
+    "gatsby": "^1.9.255",
+    "gatsby-link": "^1.6.41",
+    "gatsby-plugin-catch-links": "^1.0.19",
+    "gatsby-plugin-no-sourcemaps": "^1.0.5",
+    "gatsby-plugin-preact": "^1.0.17",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-sharp": "^1.6.43",
+    "gatsby-remark-autolink-headers": "^1.4.17",
+    "gatsby-remark-images": "^1.5.62",
+    "gatsby-remark-prismjs": "^2.0.2",
+    "gatsby-source-filesystem": "^1.5.34",
+    "gatsby-transformer-remark": "^1.7.40",
+    "lodash": "^4.17.10",
+    "prismjs": "^1.14.0",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "build:prod": "npm run clean && gatsby build",
+    "develop": "gatsby develop",
+    "clean": "rm -rf .cache public",
+    "format": "prettier --write 'src/**/*.jsx'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.12.1"
+  }
+}

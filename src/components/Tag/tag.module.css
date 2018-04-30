@@ -1,0 +1,14 @@
+.tag {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  color: rgba(36, 121, 204, .8);
+  border: 1px solid rgba(36, 121, 204, .8);
+  border-radius: 4px;
+  margin: 0 15px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color .2s cubic-bezier(.4, .01, .165, .99), border .2s cubic-bezier(.4, .01, .165, .99);
+  transition: color .2s cubic-bezier(.4, .01, .165, .99), border .2s cubic-bezier(.4, .01, .165, .99)
+}

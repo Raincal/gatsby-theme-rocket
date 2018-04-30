@@ -1,0 +1,26 @@
+.buttons {
+  padding: 0;
+  list-style: none;
+  margin-left: 0;
+}
+
+.buttons li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+}
+
+.buttons li a {
+  padding-left: 25px;
+  color: #999;
+  display: block;
+}
+
+.buttons li a i {
+  font-size: 20px;
+  text-align: center;
+  width: 25px;
+  height: 45px;
+  margin-right: 20px;
+  display: inline-block;
+}
