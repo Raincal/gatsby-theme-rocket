@@ -2,9 +2,9 @@ import React from 'react'
 import Post from './Post'
 
 const Posts = ({ posts }) => {
-  const Posts = posts
-    .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <Post key={edge.node.id} post={edge.node} isHome />)
+  const Posts = posts.map(({ node }) => (
+    <Post key={node.id} post={node} isHome />
+  ))
 
   return <React.Fragment>{Posts}</React.Fragment>
 }

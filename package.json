@@ -7,6 +7,7 @@
     "dayjs": "^1.5.16",
     "gatsby": "^1.9.255",
     "gatsby-link": "^1.6.41",
+    "gatsby-paginate": "^1.0.14",
     "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-nprogress": "^1.0.14",

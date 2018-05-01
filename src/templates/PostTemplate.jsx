@@ -1,9 +1,32 @@
 import React from 'react'
-import Post from '../components/Posts/Post'
+import Link from 'gatsby-link'
 
-const PostTemplate = ({ data }) => {
+import Post from '../components/Posts/Post'
+import Pagination from '../components/Posts/Pagination'
+
+const PostTemplate = ({ pathContext, data }) => {
   const { markdownRemark } = data
-  return <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
+  return (
+    <div>
+      <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
+      <Pagination {...pathContext}>
+        {({ prev, next }) => (
+          <div>
+            {prev && (
+              <Link style={{ float: 'left' }} to={prev.slug}>
+                {`« ${prev.title}`}
+              </Link>
+            )}
+            {next && (
+              <Link style={{ float: 'right' }} to={next.slug}>
+                {`${next.title} »`}
+              </Link>
+            )}
+          </div>
+        )}
+      </Pagination>
+    </div>
+  )
 }
 
 export default PostTemplate
