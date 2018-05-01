@@ -1,5 +1,5 @@
 ---
-title: 10 个可用 ES6 替代的 Lodash 特性
+title: "10 个可用 ES6 替代的 Lodash 特性"
 path: "lodash"
 date: "2016-06-30"
 tags: [lodash]
@@ -7,8 +7,8 @@ tags: [lodash]
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
 > 译者：[少年阿布DX](http://www.zcfy.cc/@shawndai06)
-> 链接：[http://www.zcfy.cc/article/467](http://www.zcfy.cc/article/467)
-> 原文：[https://www.sitepoint.com/lodash-features-replace-es6/](https://www.sitepoint.com/lodash-features-replace-es6/)
+> 链接：<http://www.zcfy.cc/article/467>
+> 原文：<https://www.sitepoint.com/lodash-features-replace-es6/>
 
 [Dan Prince](https://www.sitepoint.com/author/dprince/)
 

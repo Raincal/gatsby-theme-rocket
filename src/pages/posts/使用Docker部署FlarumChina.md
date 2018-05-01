@@ -1,5 +1,5 @@
 ---
-title: 使用Docker部署FlarumChina
+title: "使用 Docker 部署 FlarumChina"
 path: "deploy-flarumChina-with-docker"
 date: "2017-08-07"
 tags: ["Docker", "Linux"]
@@ -10,7 +10,7 @@ tags: ["Docker", "Linux"]
 服务器安装 Docker 和 Docker Compose
 
 参考教程：
-http://get.daocloud.io/#install-docker
+<http://get.daocloud.io/#install-docker>
 
 没有服务器的可以在本地安装 Docker 或使用 DaoCloud 的胶囊主机, 能免费体验 120 分钟，足够学习使用
 
@@ -18,7 +18,7 @@ http://get.daocloud.io/#install-docker
 
 <!-- {% imgurl 'deploy-flarumChina-with-docker/pic01.png' alt:'深度截图_选择区域_20170807083400' %} -->
 
-![深度截图_选择区域_20170807083400](./images/deploy-flarumChina-with-docker/pic01.png)
+![深度截图\_选择区域\_20170807083400](./images/deploy-flarumChina-with-docker/pic01.png)
 
 <!-- more -->
 
@@ -32,24 +32,24 @@ http://get.daocloud.io/#install-docker
 
 ### Volume
 
-- /flarum/app/assets : FlarumChina 资源目录
-- /flarum/app/extensions : FlarumChina 插件目录
+-   /flarum/app/assets : FlarumChina 资源目录
+-   /flarum/app/extensions : FlarumChina 插件目录
 
 ### 环境变量
 
-| 变量 | 描述 | 类型 | 默认值 |
-| -------- | ----------- | ---- | ------------- |
-| **UID** | Flarum user id | *optional* | 991
-| **GID** | Flarum group id | *optional* | 991
-| **DEBUG** | Flarum debug mode | *optional* | false
-| **FORUM_URL** | Forum URL | **required** | none
-| **DB_HOST** | MariaDB instance ip/hostname | *optional* | mariadb
-| **DB_USER** | MariaDB database username | *optional* | flarum
-| **DB_NAME** | MariaDB database name | *optional* | flarum
-| **DB_PASS** | MariaDB database password | **required** | none
-| **DB_PREF** | Flarum tables prefix | *optional* | none
-| **UPLOAD_MAX_SIZE** | The maximum size of an uploaded file | *optional* | 50M
-| **MEMORY_LIMIT** | maximum amount of memory used by php | *optional* | 128M
+| 变量                  | 描述                                   | 类型           | 默认值     |
+| ------------------- | ------------------------------------ | ------------ | ------- |
+| **UID**             | Flarum user id                       | _optional_   | 991     |
+| **GID**             | Flarum group id                      | _optional_   | 991     |
+| **DEBUG**           | Flarum debug mode                    | _optional_   | false   |
+| **FORUM_URL**       | Forum URL                            | **required** | none    |
+| **DB_HOST**         | MariaDB instance ip/hostname         | _optional_   | mariadb |
+| **DB_USER**         | MariaDB database username            | _optional_   | flarum  |
+| **DB_NAME**         | MariaDB database name                | _optional_   | flarum  |
+| **DB_PASS**         | MariaDB database password            | **required** | none    |
+| **DB_PREF**         | Flarum tables prefix                 | _optional_   | none    |
+| **UPLOAD_MAX_SIZE** | The maximum size of an uploaded file | _optional_   | 50M     |
+| **MEMORY_LIMIT**    | maximum amount of memory used by php | _optional_   | 128M    |
 
 ### 编写 docker-compose.yml 文件
 
@@ -117,7 +117,7 @@ nginx:
 
 <!-- {% imgurl 'deploy-flarumChina-with-docker/pic02.png' alt:'深度截图_选择区域_20170807084450' %} -->
 
-![深度截图_选择区域_20170807084450](./images/deploy-flarumChina-with-docker/pic02.png)
+![深度截图\_选择区域\_20170807084450](./images/deploy-flarumChina-with-docker/pic02.png)
 
 ### 设置 nginx 反向代理
 
@@ -127,7 +127,7 @@ nginx:
 
 <!-- {% imgurl 'deploy-flarumChina-with-docker/pic03.png' alt:'深度截图_选择区域_20170807093749' %} -->
 
-![深度截图_选择区域_20170807093749](./images/deploy-flarumChina-with-docker/pic03.png)
+![深度截图\_选择区域\_20170807093749](./images/deploy-flarumChina-with-docker/pic03.png)
 
 ```sh
 docker exec -it nginx ngxproxy

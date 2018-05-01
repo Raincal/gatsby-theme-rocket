@@ -31,10 +31,20 @@
     "build:prod": "npm run clean && gatsby build",
     "develop": "gatsby develop",
     "clean": "rm -rf .cache public",
-    "format": "prettier --write 'src/**/*.jsx'",
+    "lint:md": "remark src/pages/",
+    "format": "prettier --write 'src/**/*.{js,jsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "remark-cli": "^5.0.0",
+    "remark-preset-lint-recommended": "^3.0.1"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      ["lint-no-shortcut-reference-link", false],
+      ["lint-no-undefined-references", false]
+    ]
   }
 }

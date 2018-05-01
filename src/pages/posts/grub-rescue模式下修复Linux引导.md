@@ -1,5 +1,5 @@
 ---
-title: grub rescue模式下修复Linux引导
+title: "grub rescue 模式下修复 Linux 引导"
 path: "grub-rescue"
 date: "2017-11-22"
 tags: ["Linux", "grub", "Arch"]
