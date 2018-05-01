@@ -33,6 +33,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#2c88e8`,
+        showSpinner: false,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-next',
     'gatsby-plugin-preact',

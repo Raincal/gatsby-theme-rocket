@@ -9,6 +9,7 @@
     "gatsby-link": "^1.6.41",
     "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-no-sourcemaps": "^1.0.5",
+    "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-preact": "^1.0.17",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
@@ -43,8 +44,14 @@
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended",
-      ["lint-no-shortcut-reference-link", false],
-      ["lint-no-undefined-references", false]
+      [
+        "lint-no-shortcut-reference-link",
+        false
+      ],
+      [
+        "lint-no-undefined-references",
+        false
+      ]
     ]
   }
 }
