@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
-
-import styles from './posts.module.css'
+import React, { Fragment } from 'react'
 import Title from './Title'
+import styles from './posts.module.css'
 
 // https://github.com/developit/preact/issues/946#issuecomment-353151850
 React.Fragment = 'x-fragment'

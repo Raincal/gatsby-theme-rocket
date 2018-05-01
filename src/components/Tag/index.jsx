@@ -1,7 +1,6 @@
-import React from 'react'
 import Link from 'gatsby-link'
 import kebabCase from 'lodash/kebabCase'
-
+import React from 'react'
 import styles from './tag.module.css'
 
 const Tag = ({ value, count }) => (

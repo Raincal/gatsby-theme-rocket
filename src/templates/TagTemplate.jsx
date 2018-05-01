@@ -1,6 +1,6 @@
 import React from 'react'
-import Posts from '../components/Posts'
 import Intro from '../components/Intro'
+import Posts from '../components/Posts'
 
 const TagTemplage = ({ pathContext, data }) => {
   const { tag } = pathContext

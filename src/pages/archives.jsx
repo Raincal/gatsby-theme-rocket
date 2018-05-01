@@ -1,6 +1,5 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
+import React from 'react'
 import Title from '../components/Posts/Title'
 
 const ArchivesLinks = ({ posts }) => (

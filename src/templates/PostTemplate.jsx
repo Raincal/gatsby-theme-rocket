@@ -1,8 +1,7 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
-import Post from '../components/Posts/Post'
+import React from 'react'
 import Pagination from '../components/Posts/Pagination'
+import Post from '../components/Posts/Post'
 
 const PostTemplate = ({ pathContext, data }) => {
   const { markdownRemark } = data

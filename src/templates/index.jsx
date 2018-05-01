@@ -1,6 +1,5 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
+import React from 'react'
 import Posts from '../components/Posts'
 import Pagination from '../components/Posts/Pagination'
 

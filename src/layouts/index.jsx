@@ -1,12 +1,9 @@
+import 'prismjs/themes/prism-tomorrow.css'
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
-
-import './index.css'
-import Profile from '../components/Profile'
 import Buttons from '../components/Buttons'
-
-import 'prismjs/themes/prism-tomorrow.css'
+import Profile from '../components/Profile'
+import './index.css'
 
 const Layout = ({ children, data }) => (
   <div>

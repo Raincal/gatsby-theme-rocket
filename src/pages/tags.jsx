@@ -1,7 +1,6 @@
 import React from 'react'
-
-import Tag from '../components/Tag'
 import Title from '../components/Posts/Title'
+import Tag from '../components/Tag'
 
 const Tags = ({ tags }) => (
   <ul style={{ marginLeft: 0 }}>
