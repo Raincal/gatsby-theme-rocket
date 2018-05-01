@@ -6,7 +6,7 @@ import './index.css'
 import Profile from '../components/Profile'
 import Buttons from '../components/Buttons'
 
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 const Layout = ({ children, data }) => (
   <div>
