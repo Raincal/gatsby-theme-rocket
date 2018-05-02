@@ -19,7 +19,7 @@ const Header = ({ title, showMask, toggle }) => {
           side: showMask,
         })}
         onClick={toggle}
-        onTouchStart={toggle}
+        onTouchEnd={toggle}
       >
         <i />
       </div>

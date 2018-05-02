@@ -30,7 +30,8 @@ class Layout extends React.Component {
       this.closeMask()
     })
   }
-  toggle = () => {
+  toggle = e => {
+    e.preventDefault()
     this.setState({
       showMask: !this.state.showMask,
     })
