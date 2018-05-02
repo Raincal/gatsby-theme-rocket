@@ -109,3 +109,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     })
   })
 }
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  config.merge({
+    resolve: {
+      alias: {
+        styles: path.resolve(__dirname, 'src/styles'),
+      },
+    },
+  })
+
+  return config
+}

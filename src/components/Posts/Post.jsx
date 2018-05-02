@@ -1,7 +1,7 @@
 import Link from 'gatsby-link'
 import React, { Fragment } from 'react'
+import styles from 'styles/posts.module.css'
 import Title from './Title'
-import styles from './posts.module.css'
 
 // https://github.com/developit/preact/issues/946#issuecomment-353151850
 React.Fragment = 'x-fragment'

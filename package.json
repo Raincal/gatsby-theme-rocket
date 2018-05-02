@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Raincal <raincal.chen@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.5",
     "dayjs": "^1.5.16",
     "gatsby": "^1.9.255",
     "gatsby-link": "^1.6.41",
@@ -44,8 +45,7 @@
   },
   "remarkConfig": {
     "plugins": [
-      "remark-preset-lint-recommended",
-      [
+      "remark-preset-lint-recommended", [
         "lint-no-shortcut-reference-link",
         false
       ],

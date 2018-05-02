@@ -1,7 +1,6 @@
-import React from 'react'
 import Link from 'gatsby-link'
-
-import styles from './buttons.module.css'
+import React from 'react'
+import styles from 'styles/buttons.module.css'
 
 const Buttons = ({ data }) => {
   return (
@@ -10,7 +9,7 @@ const Buttons = ({ data }) => {
         <li key={i}>
           <Link to={button.url}>
             <i className={`iconfont icon-${button.icon}`} />
-            <span>{button.name}</span>
+            <span className={styles.title}>{button.name}</span>
           </Link>
         </li>
       ))}

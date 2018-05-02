@@ -1,0 +1,38 @@
+@import './_variables.css';
+.profile {
+  padding: 40px 0 10px 0;
+}
+
+.avatar {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  background-image: url(../images/avatar.png);
+  background-size: 100% 100%;
+  margin: 0 auto;
+  /* transition: all .2s; */
+  @media(max-width: 1024px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media(--small) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.title {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  /* transition: all .2s; */
+  @media(--medium) {
+    display: none;
+  }
+  /* @media(--small) {
+    display: block;
+  } */
+}

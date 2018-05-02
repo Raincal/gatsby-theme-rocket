@@ -1,3 +1,4 @@
+@import './_variables.css';
 .buttons {
   padding: 0;
   list-style: none;
@@ -23,4 +24,13 @@
   height: 45px;
   margin-right: 20px;
   display: inline-block;
+}
+
+.title {
+  @media (--medium) {
+    display: none;
+  }
+  @media(--small) {
+    display: inline-block;
+  }
 }

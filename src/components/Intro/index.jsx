@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './intro.module.css'
+import styles from 'styles/intro.module.css'
 
 const Intro = ({ tag }) => {
   return (

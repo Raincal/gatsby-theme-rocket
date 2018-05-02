@@ -1,30 +1,55 @@
 import 'prismjs/themes/prism-tomorrow.css'
 import React from 'react'
 import Helmet from 'react-helmet'
-import Buttons from '../components/Buttons'
-import Profile from '../components/Profile'
-import './index.css'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Sidebar from '../components/Sidebar'
+import SidebarMask from '../components/Sidebar/SidebarMask'
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Blog' },
-        { name: 'keywords', content: 'Raincal, Blog' },
-      ]}
-    />
-    <div className="container">
-      <div className="sidebar-container">
-        <div className="sidebar">
-          <Profile title={data.site.siteMetadata.title} />
-          <Buttons data={data.site.siteMetadata.navButtons} />
-        </div>
+class Layout extends React.Component {
+  state = {
+    showMask: false,
+  }
+  componentDidMount() {
+    window.addEventListener('resize', this.closeMask)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.closeMask)
+  }
+  closeMask = () => {
+    this.setState({
+      showMask: false,
+    })
+  }
+  toggle = () => {
+    this.setState({
+      showMask: !this.state.showMask,
+    })
+  }
+  render() {
+    const { data, children } = this.props
+    const { showMask } = this.state
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Blog' },
+            { name: 'keywords', content: 'Raincal, Blog' },
+          ]}
+        />
+        <Sidebar showMask={showMask} {...data.site.siteMetadata} />
+        <SidebarMask showMask={showMask} />
+        <Header
+          toggle={this.toggle}
+          showMask={showMask}
+          title={data.site.siteMetadata.title}
+        />
+        <Main showMask={showMask}>{children()}</Main>
       </div>
-      <div className="main-container">{children()}</div>
-    </div>
-  </div>
-)
+    )
+  }
+}
 
 export default Layout
 

@@ -1,0 +1,21 @@
+@import './_variables.css';
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  background: #202020;
+  transition: transform .2s cubic-bezier(.4, .01, .165, .99);
+  z-index: 5;
+  @media(--medium) {
+    width: 75px;
+  }
+  @media(--small) {
+    transform: translate3D(-250px, 0, 0);
+    width: 250px;
+  }
+}
+
+.show {
+  transform: translate3D(0, 0, 0);
+}

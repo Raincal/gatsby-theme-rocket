@@ -1,0 +1,20 @@
+@import './global/main.css';
+@import './_variables.css';
+.main {
+  max-width: 1390px;
+  padding: 0 40px 0 290px;
+  /* transition: all .2s; */
+  @media(--medium) {
+    width: 100%;
+    padding-left: 115px;
+  }
+  @media(--small) {
+    transition: all .2s cubic-bezier(.4, .01, .165, .99);
+    padding: 50px 20px 0;
+  }
+}
+
+.show {
+  position: fixed;
+  transform: translate3D(250px, 0, 0);
+}
