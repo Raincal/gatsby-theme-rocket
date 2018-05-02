@@ -2,15 +2,20 @@
 .header {
   background: #323436;
   position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
+  width: 100vw;
   height: 50px;
   line-height: 50px;
   text-align: center;
   z-index: 5;
-  transition: all .2s cubic-bezier(.4, .01, .165, .99);
   display: none;
-  @media(--small) {
+  overflow: hidden;
+  @media (--small) {
     display: block;
+    transform: translate3D(0, 0, 0);
+    transition: all 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   }
 }
 
@@ -42,22 +47,22 @@
   position: absolute;
   left: 14px;
   background-color: #999;
-  transition: all .2s cubic-bezier(.4, .01, .165, .99) .3s
+  transition: all 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.3s;
 }
 
 .btnBar i {
   top: 25px;
-  opacity: 1
+  opacity: 1;
 }
 
 .btnBar:before {
   content: '';
-  top: 17px
+  top: 17px;
 }
 
 .btnBar:after {
   content: '';
-  bottom: 16px
+  bottom: 16px;
 }
 
 .side i {
@@ -74,4 +79,15 @@
   width: 24px;
   transform: rotate(45deg);
   bottom: 24px;
+}
+
+.me {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-image: url('../images/avatar.png');
+  background-size: 100% 100%;
 }

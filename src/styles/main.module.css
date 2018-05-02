@@ -15,6 +15,6 @@
 }
 
 .show {
-  position: fixed;
   transform: translate3D(250px, 0, 0);
+  position: fixed;
 }

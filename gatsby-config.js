@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "RAINCAL'S BLOG",
+    title: "Raincal's Blog",
     navButtons: [
       { name: '首页', icon: 'home', url: '/' },
       { name: '归档', icon: 'archive', url: '/archives' },

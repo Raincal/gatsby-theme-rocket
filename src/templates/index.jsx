@@ -24,7 +24,7 @@ const IndexPage = ({ pathContext }) => {
                 下一页 »
               </Link>
             )}
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ width: '80px', margin: '0 auto' }}>
               <Link to="/archives">博客归档</Link>
             </div>
           </div>
