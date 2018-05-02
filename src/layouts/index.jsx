@@ -21,6 +21,15 @@ class Layout extends React.Component {
       showMask: false,
     })
   }
+  onCloseMask = e => {
+    e.preventDefault()
+    this.closeMask()
+  }
+  onCloseMaskDelay = () => {
+    window.___emitter.on(`onPostLoadPageResources`, () => {
+      this.closeMask()
+    })
+  }
   toggle = () => {
     this.setState({
       showMask: !this.state.showMask,
@@ -43,8 +52,12 @@ class Layout extends React.Component {
             },
           ]}
         />
-        <Sidebar showMask={showMask} {...data.site.siteMetadata} />
-        <SidebarMask showMask={showMask} />
+        <Sidebar
+          onCloseMaskDelay={this.onCloseMaskDelay}
+          showMask={showMask}
+          {...data.site.siteMetadata}
+        />
+        <SidebarMask onCloseMask={this.onCloseMask} showMask={showMask} />
         <Header
           toggle={this.toggle}
           showMask={showMask}

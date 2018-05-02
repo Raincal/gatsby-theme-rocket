@@ -7,7 +7,7 @@ import Profile from './Profile'
 
 let cx = classNames.bind(styles)
 
-const Sidebar = ({ title, navButtons, showMask }) => {
+const Sidebar = ({ title, navButtons, showMask, onCloseMaskDelay }) => {
   return (
     <nav
       className={cx({
@@ -16,7 +16,7 @@ const Sidebar = ({ title, navButtons, showMask }) => {
       })}
     >
       <Profile title={title} />
-      <Buttons data={navButtons} />
+      <Buttons onCloseMaskDelay={onCloseMaskDelay} data={navButtons} />
     </nav>
   )
 }

@@ -1,5 +1,6 @@
 import Link from 'gatsby-link'
 import React from 'react'
+import styles from 'styles/posts.module.css'
 import Title from '../components/Posts/Title'
 
 const ArchivesLinks = ({ posts }) => (
@@ -30,7 +31,7 @@ const Archives = ({
     allMarkdownRemark: { group },
   },
 }) => (
-  <div style={{ padding: '30px 0' }}>
+  <div className={styles.article}>
     <Title>归档</Title>
     {group.reverse().map(({ fieldValue, totalCount, edges }) => (
       <React.Fragment>

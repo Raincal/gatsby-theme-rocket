@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from 'styles/posts.module.css'
 import Title from '../components/Posts/Title'
 import Tag from '../components/Tag'
 
@@ -14,7 +15,7 @@ const TagsPage = ({
   },
 }) => {
   return (
-    <div style={{ padding: '30px 0' }}>
+    <div className={styles.article}>
       <Title>标签</Title>
       <Tags tags={group} />
     </div>

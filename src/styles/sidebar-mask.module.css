@@ -10,4 +10,6 @@
 
 .show {
   display: block;
+  width: calc(100% - 250px);
+  height: 100%;
 }
