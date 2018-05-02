@@ -36,6 +36,11 @@ class Layout extends React.Component {
           meta={[
             { name: 'description', content: 'Blog' },
             { name: 'keywords', content: 'Raincal, Blog' },
+            {
+              name: 'viewport',
+              content:
+                'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
+            },
           ]}
         />
         <Sidebar showMask={showMask} {...data.site.siteMetadata} />
