@@ -15,6 +15,10 @@
   padding-left: 25px;
   color: #999;
   display: block;
+  transition: color .2s cubic-bezier(.4, .01, .165, .99);
+  &:hover {
+    color: rgba(153, 153, 153, .8)
+  }
 }
 
 .buttons li a i {
@@ -24,6 +28,11 @@
   height: 45px;
   margin-right: 20px;
   display: inline-block;
+}
+
+.buttons li .inline {
+  display: inline-block;
+  width: 40px;
 }
 
 .title {

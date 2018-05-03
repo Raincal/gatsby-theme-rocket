@@ -82,6 +82,11 @@ export const query = graphql`
           icon
           url
         }
+        socialLinks {
+          name
+          icon
+          url
+        }
       }
     }
   }

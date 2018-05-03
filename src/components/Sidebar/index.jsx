@@ -4,10 +4,17 @@ import 'styles/global/iconfont.css'
 import styles from 'styles/sidebar.module.css'
 import Buttons from './Buttons'
 import Profile from './Profile'
+import SocialButtons from './SocialButtons'
 
 let cx = classNames.bind(styles)
 
-const Sidebar = ({ title, navButtons, showMask, onCloseMaskDelay }) => {
+const Sidebar = ({
+  title,
+  navButtons,
+  socialLinks,
+  showMask,
+  onCloseMaskDelay,
+}) => {
   return (
     <nav
       className={cx({
@@ -17,6 +24,7 @@ const Sidebar = ({ title, navButtons, showMask, onCloseMaskDelay }) => {
     >
       <Profile title={title} />
       <Buttons onCloseMaskDelay={onCloseMaskDelay} data={navButtons} />
+      <SocialButtons data={socialLinks} />
     </nav>
   )
 }
