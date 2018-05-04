@@ -1,7 +1,9 @@
 import Link from 'gatsby-link'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import styles from 'styles/posts.module.css'
 import Title from '../components/Posts/Title'
+import config from '../config'
 
 const ArchivesLinks = ({ posts }) => (
   <ul style={{ lineHeight: 1.8 }}>
@@ -32,6 +34,7 @@ const Archives = ({
   },
 }) => (
   <div className={styles.article}>
+    <Helmet title={`归档 - ${config.title}`} />
     <Title>归档</Title>
     {group.reverse().map(({ fieldValue, totalCount, edges }) => (
       <React.Fragment>

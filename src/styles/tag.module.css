@@ -9,6 +9,5 @@
   border-radius: 4px;
   margin: 0 15px 10px 0;
   text-decoration: none;
-  -webkit-transition: color .2s cubic-bezier(.4, .01, .165, .99), border .2s cubic-bezier(.4, .01, .165, .99);
   transition: color .2s cubic-bezier(.4, .01, .165, .99), border .2s cubic-bezier(.4, .01, .165, .99)
 }

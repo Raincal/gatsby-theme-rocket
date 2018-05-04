@@ -1,13 +1,16 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Intro from '../components/Intro'
 import Posts from '../components/Posts'
-
+import config from '../config'
 const TagTemplage = ({ pathContext, data }) => {
   const { tag } = pathContext
   const { edges, totalCount } = data.allMarkdownRemark
+  const title = `标签${tag}下的文章`
 
   return (
     <div>
+      <Helmet title={`${title} - ${config.title}`} />
       <Intro tag={tag} />
       <Posts posts={edges} />
     </div>
