@@ -37,7 +37,7 @@ tags: ["Docker", "Linux"]
 
 ### 环境变量
 
-| 变量                  | 描述                                   | 类型           | 默认值     |
+| 变量                | 描述                                 | 类型         | 默认值  |
 | ------------------- | ------------------------------------ | ------------ | ------- |
 | **UID**             | Flarum user id                       | _optional_   | 991     |
 | **GID**             | Flarum group id                      | _optional_   | 991     |
@@ -70,7 +70,7 @@ MYSQL_PASSWORD
 
 等环境变量
 
-```yml
+```yaml
 flarum:
   image: raincal/docker-flarum-china:0.1.0-beta.7-stable
   container_name: flarum
@@ -129,7 +129,7 @@ nginx:
 
 ![深度截图\_选择区域\_20170807093749](./images/deploy-flarumChina-with-docker/pic03.png)
 
-```sh
+```bash
 docker exec -it nginx ngxproxy
 
 Welcome to ngxproxy utility.

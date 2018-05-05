@@ -1,10 +1,10 @@
-import 'prismjs/themes/prism-tomorrow.css'
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Sidebar from '../components/Sidebar'
 import SidebarMask from '../components/Sidebar/SidebarMask'
+import '../styles/global/oceanic-next.css'
 
 class Layout extends React.Component {
   state = {
