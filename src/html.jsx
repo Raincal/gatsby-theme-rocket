@@ -30,9 +30,12 @@ module.exports = class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="/css/dmvendor.css" />
           {this.props.headComponents}
           {css}
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Raincal/gatsby-firekylin@v1.0.0/static/css/dmvendor.css"
+          />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
