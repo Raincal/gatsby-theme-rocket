@@ -26,7 +26,7 @@ const Header = ({ title, showMask, toggle }) => {
       <h1>
         <Link to="/">{title}</Link>
       </h1>
-      <Link className={styles.me} to="/about" />
+      <Link className={styles.about} to="/about/" />
     </header>
   )
 }
