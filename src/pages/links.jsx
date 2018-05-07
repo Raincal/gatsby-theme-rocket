@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Comment from '../components/Comment'
 import Post from '../components/Posts/Post'
 import config from '../config'
 
@@ -8,6 +9,7 @@ const Links = ({ data: { markdownRemark } }) => {
     <div>
       <Helmet title={`友链 - ${config.title}`} />
       <Post post={markdownRemark} isHome={false} />
+      <Comment />
     </div>
   )
 }

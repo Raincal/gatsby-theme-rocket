@@ -1,5 +1,5 @@
 ---
-title: "友情链接"
+title: "友链"
 path: "links"
 type: "links"
 ---

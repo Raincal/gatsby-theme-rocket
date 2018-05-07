@@ -2443,9 +2443,9 @@ dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
 
-dayjs@^1.5.16:
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.5.16.tgz#f500ba23a573bca7b15b8e8e35c9c548bb527af7"
+dayjs@^1.5.20:
+  version "1.5.20"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.5.20.tgz#e554bb17d6b066250ea98fca141a05f0fd223924"
 
 death@^1.0.0:
   version "1.1.0"
@@ -3669,9 +3669,9 @@ gatsby-cli@^1.1.51:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.41:
-  version "1.6.41"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.41.tgz#26e81e3cbb841b6843fd720152c48d5c43feb7b5"
+gatsby-link@^1.6.44:
+  version "1.6.44"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.44.tgz#31912e66d3b21632ce27e5b7310ec88d9a75eac3"
   dependencies:
     "@types/history" "^4.6.2"
     "@types/react-router-dom" "^4.2.2"
@@ -3692,9 +3692,9 @@ gatsby-paginate@^1.0.14:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-catch-links@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.19.tgz#5f25b6e9b1b208afd6e177e234c9e483b5a60e2a"
+gatsby-plugin-catch-links@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.22.tgz#a51f525afcdf9a1050e284f93f72fc33694c9789"
   dependencies:
     babel-runtime "^6.26.0"
 
@@ -3741,7 +3741,7 @@ gatsby-plugin-react-next@^1.0.11:
     react "^16.0.0"
     react-dom "^16.0.0"
 
-gatsby-plugin-sharp@^1.6.43, gatsby-plugin-sharp@^1.6.44:
+gatsby-plugin-sharp@^1.6.44:
   version "1.6.44"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.44.tgz#397e53e2962e5e1dc870408610aad7d6d2d64cb8"
   dependencies:
@@ -3759,24 +3759,24 @@ gatsby-plugin-sharp@^1.6.43, gatsby-plugin-sharp@^1.6.44:
     sharp "^0.20.0"
     svgo "^0.7.2"
 
-gatsby-react-router-scroll@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.14.tgz#7e3b59c2266772030c6bfeaa8914c71dd3c12c59"
+gatsby-react-router-scroll@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.17.tgz#16b9c67da7f4a997ebb8c784f4feba2b23af4f98"
   dependencies:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@^1.4.17:
-  version "1.4.17"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-1.4.17.tgz#47c4d28493d5df06ce2da88f0499762cf6fc3252"
+gatsby-remark-autolink-headers@^1.4.18:
+  version "1.4.18"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-1.4.18.tgz#7f1536b3c67b32d902da5cd96cc2de863b8c1f6f"
   dependencies:
     babel-runtime "^6.26.0"
     github-slugger "^1.1.1"
     mdast-util-to-string "^1.0.2"
     unist-util-visit "^1.1.1"
 
-gatsby-remark-images@^1.5.62:
+gatsby-remark-images@^1.5.63:
   version "1.5.63"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.63.tgz#0ddfd3bcd3386129749024d6ddb88178b87422f2"
   dependencies:
@@ -3796,7 +3796,7 @@ gatsby-remark-prismjs@^2.0.2:
     parse-numeric-range "0.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-source-filesystem@^1.5.34:
+gatsby-source-filesystem@^1.5.35:
   version "1.5.35"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.35.tgz#1d7a92c60def1ba6f7f33c468cf4832af0e904ed"
   dependencies:
@@ -3838,9 +3838,9 @@ gatsby-transformer-remark@^1.7.40:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@^1.9.255:
-  version "1.9.256"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.256.tgz#9dcd72a09c0a3b74825db3a1e0afa402de68cd2b"
+gatsby@^1.9.259:
+  version "1.9.259"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.259.tgz#4abd0e3fa84be9281e0981423ee355689879a7ab"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3883,9 +3883,9 @@ gatsby@^1.9.255:
     gatsby-1-config-css-modules "^1.0.11"
     gatsby-1-config-extract-plugin "^1.0.3"
     gatsby-cli "^1.1.51"
-    gatsby-link "^1.6.41"
+    gatsby-link "^1.6.44"
     gatsby-module-loader "^1.0.11"
-    gatsby-react-router-scroll "^1.0.14"
+    gatsby-react-router-scroll "^1.0.17"
     glob "^7.1.1"
     graphql "^0.11.7"
     graphql-relay "^0.5.1"

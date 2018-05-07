@@ -17,9 +17,10 @@ class Layout extends React.Component {
     window.removeEventListener('resize', this.closeMask)
   }
   closeMask = () => {
-    this.setState({
-      showMask: false,
-    })
+    this.state.showMask &&
+      this.setState({
+        showMask: false,
+      })
   }
   onCloseMask = e => {
     e.preventDefault()

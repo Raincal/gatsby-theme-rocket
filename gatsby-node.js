@@ -7,9 +7,9 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
-    let slug = `/post/${node.frontmatter.path}`
+    let slug = `/post/${node.frontmatter.path}/`
     if (node.frontmatter.type) {
-      slug = `/${node.frontmatter.type}`
+      slug = `/${node.frontmatter.type}/`
     }
     const date = dayjs(node.frontmatter.date).format('YYYY年MM月')
     createNodeField({

@@ -1,6 +1,7 @@
 import Link from 'gatsby-link'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Comment from '../components/Comment'
 import Pagination from '../components/Posts/Pagination'
 import Post from '../components/Posts/Post'
 import config from '../config'
@@ -27,6 +28,7 @@ const PostTemplate = ({ pathContext, data }) => {
           </div>
         )}
       </Pagination>
+      <Comment />
     </div>
   )
 }

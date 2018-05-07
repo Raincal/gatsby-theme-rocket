@@ -2,4 +2,8 @@
   "files.associations": {
     "*.js": "javascriptreact"
   },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
 }

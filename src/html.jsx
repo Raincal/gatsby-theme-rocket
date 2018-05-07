@@ -32,6 +32,14 @@ module.exports = class HTML extends React.Component {
           <link rel="icon" href="/favicon.ico" />
           {this.props.headComponents}
           {css}
+          <script
+            async
+            src="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.4/dist/iDisqus.min.js"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.4/dist/iDisqus.min.css"
+          />
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/Raincal/gatsby-firekylin@v1.0.0/static/css/dmvendor.css"
