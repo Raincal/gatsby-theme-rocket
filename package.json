@@ -5,7 +5,7 @@
   "author": "Raincal <raincal.chen@gmail.com>",
   "dependencies": {
     "classnames": "^2.2.5",
-    "dayjs": "^1.5.20",
+    "dayjs": "^1.5.22",
     "gatsby": "^1.9.259",
     "gatsby-link": "^1.6.44",
     "gatsby-paginate": "^1.0.14",
