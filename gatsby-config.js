@@ -57,12 +57,14 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#323436',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/icon.png',
       },
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
+        navigateFallback: null,
+        navigateFallbackWhitelist: [],
         staticFileGlobs: [
           `${rootDir}/**/*.ttf`,
           `${rootDir}/commons-*js`,
@@ -83,8 +85,8 @@ module.exports = {
             handler: `cacheFirst`,
           },
           {
-            urlPattern: /\/\d{1,2}\//,
-            handler: 'fastest',
+            urlPattern: /\/\w+([/\w.-]+)?\/$/,
+            handler: 'cacheFirst',
           },
           {
             urlPattern: /\.(?:js|css|ttf|woff|woff2)$/,
