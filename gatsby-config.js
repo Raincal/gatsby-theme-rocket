@@ -1,4 +1,5 @@
 const config = require('./src/config/')
+const rootDir = 'public'
 
 module.exports = {
   siteMetadata: {
@@ -46,6 +47,7 @@ module.exports = {
     'gatsby-plugin-react-next',
     'gatsby-plugin-preact',
     'gatsby-plugin-no-sourcemaps',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -58,6 +60,34 @@ module.exports = {
         icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        staticFileGlobs: [
+          `${rootDir}/**/*.ttf`,
+          `${rootDir}/commons-*js`,
+          `${rootDir}/app-*js`,
+          `${rootDir}/component-*js`,
+          `${rootDir}/index.html`,
+          `${rootDir}/manifest.json`,
+          `${rootDir}/manifest.webmanifest`,
+          `${rootDir}/offline-plugin-app-shell-fallback/index.html`,
+        ],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/cdn\.jsdelivr\.net/,
+            handler: 'cacheFirst',
+          },
+          {
+            urlPattern: /\/\d{1,}\//,
+            handler: 'fastest',
+          },
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2)$/,
+            handler: `fastest`,
+          },
+        ],
+      },
+    },
   ],
 }
