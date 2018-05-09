@@ -7,7 +7,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
-    let slug = `/post/${node.frontmatter.path}/`
+    const path = node.frontmatter.path.toLowerCase()
+    let slug = `/post/${path}/`
     if (node.frontmatter.type) {
       slug = `/${node.frontmatter.type}/`
     }
