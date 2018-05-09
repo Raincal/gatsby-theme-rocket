@@ -79,11 +79,15 @@ module.exports = {
             handler: 'cacheFirst',
           },
           {
-            urlPattern: /\/\d{1,}\//,
+            urlPattern: /\/static\//,
+            handler: `cacheFirst`,
+          },
+          {
+            urlPattern: /\/\d{1,2}\//,
             handler: 'fastest',
           },
           {
-            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2)$/,
+            urlPattern: /\.(?:js|css|ttf|woff|woff2)$/,
             handler: `fastest`,
           },
         ],
