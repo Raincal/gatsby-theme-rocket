@@ -49,6 +49,12 @@ module.exports = {
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-netlify',
     {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ["/tag/*"],
+      }
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: "Raincal's Blog",
