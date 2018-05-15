@@ -1,5 +1,6 @@
 @font-face {
   font-family: iconfont;
+  font-display: block;
   src: url(/fonts/iconfont.eot);
   src: url(/fonts/iconfont.eot?#iefix) format("embedded-opentype"), url(/fonts/iconfont.ttf) format("truetype"), url(/fonts/iconfont.svg#iconfont) format("svg");
 }

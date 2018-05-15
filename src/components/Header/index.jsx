@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import Link from 'gatsby-link'
+import Link, { navigateTo } from 'gatsby-link'
 import React from 'react'
 import styles from 'styles/header.module.css'
 
@@ -26,7 +26,7 @@ const Header = ({ title, showMask, toggle }) => {
       <h1>
         <Link to="/">{title}</Link>
       </h1>
-      <Link className={styles.about} to="/about/" />
+      <div className={styles.about} onClick={() => navigateTo('/about/')} />
     </header>
   )
 }

@@ -1,11 +1,11 @@
-import Link from 'gatsby-link'
+import { navigateTo } from 'gatsby-link'
 import React from 'react'
 import styles from 'styles/profile.module.css'
 
 const Profile = ({ title }) => {
   return (
     <div className={styles.profile}>
-      <Link to="/" className={styles.avatar} />
+      <div className={styles.avatar} onClick={() => navigateTo('/')} />
       <span className={styles.title}>{title}</span>
     </div>
   )

@@ -83,7 +83,6 @@
 }
 
 .about {
-  display: block;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -91,4 +90,5 @@
   top: 10px;
   background-image: url('../images/avatar.png');
   background-size: 100% 100%;
+  cursor: pointer;
 }

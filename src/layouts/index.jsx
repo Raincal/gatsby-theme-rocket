@@ -42,18 +42,11 @@ class Layout extends React.Component {
     const { showMask } = this.state
     return (
       <div>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Blog' },
-            { name: 'keywords', content: 'Raincal, Blog' },
-            {
-              name: 'viewport',
-              content:
-                'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
-            },
-          ]}
-        />
+        <Helmet title={data.site.siteMetadata.title}>
+          <meta name="description" content="Blog" />
+          <meta name="keywords" content="Raincal, Blog" />
+          <html lang="zh-CN" />
+        </Helmet>
         <Sidebar
           onCloseMaskDelay={this.onCloseMaskDelay}
           showMask={showMask}
