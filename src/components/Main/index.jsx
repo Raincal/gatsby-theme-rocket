@@ -5,13 +5,13 @@ import styles from 'styles/main.module.css'
 let cx = classNames.bind(styles)
 
 const Main = ({ showMask, children }) => (
-  <main
+  <div
     className={cx({
       main: true,
       show: showMask,
     })}
   >
     {children}
-  </main>
+  </div>
 )
 export default Main
