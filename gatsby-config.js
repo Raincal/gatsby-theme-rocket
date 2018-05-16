@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ["/tag/*"],
-      }
+        exclude: ['/tag/*'],
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -91,7 +91,7 @@ module.exports = {
             handler: `cacheFirst`,
           },
           {
-            urlPattern: /\/\w+([/\w.-]+)?\/$/,
+            urlPattern: /^(?!https:\/\/raincal-blog-disqus\.now\.sh).*\/\w+([/\w.-]+)?\/$/,
             handler: 'cacheFirst',
           },
           {
