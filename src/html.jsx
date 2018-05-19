@@ -34,11 +34,11 @@ module.exports = class HTML extends React.Component {
           {css}
           <script
             async
-            src="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.4/dist/iDisqus.min.js"
+            src="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.5/dist/iDisqus.min.js"
           />
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.4/dist/iDisqus.min.css"
+            href="https://cdn.jsdelivr.net/gh/Raincal/disqus-php-api@1.1.5/dist/iDisqus.min.css"
           />
         </head>
         <body {...this.props.bodyAttributes}>
