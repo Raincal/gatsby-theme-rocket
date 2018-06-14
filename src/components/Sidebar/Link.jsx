@@ -1,5 +1,5 @@
-import GatsbyLink from 'gatsby-link'
-import React from 'react'
+import GatsbyLink from 'gatsby-link';
+import React from 'react';
 
 const Link = ({ children, to, ...other }) => {
   const internal = /^\/(?!\/)/.test(to)
@@ -12,7 +12,7 @@ const Link = ({ children, to, ...other }) => {
     )
   }
   return (
-    <a href={to} {...other} target="_blank" rel="noopener">
+    <a href={to} {...other} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   )

@@ -2,16 +2,17 @@ import Link from 'gatsby-link'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import styles from 'styles/posts.module.css'
+import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
 import config from '../config'
 
 const ArchivesLinks = ({ posts }) => (
   <ul style={{ lineHeight: 1.8 }}>
-    {posts.map(({ node: { fields, frontmatter } }) => {
+    {posts.map(({ node: { fields, frontmatter } }, i) => {
       const { slug } = fields
       const { date, title } = frontmatter
       return (
-        <li>
+        <li key={i}>
           <Link to={slug}>{title}</Link>{' '}
           <span
             style={{
@@ -33,19 +34,21 @@ const Archives = ({
     allMarkdownRemark: { group },
   },
 }) => (
-  <div className={styles.article}>
-    <Helmet title={`归档 - ${config.title}`} />
-    <Title>归档</Title>
-    {group.reverse().map(({ fieldValue, totalCount, edges }) => (
-      <React.Fragment>
-        <h3>
-          {fieldValue}
-          {` (${totalCount})`}
-        </h3>
-        <ArchivesLinks posts={edges} />
-      </React.Fragment>
-    ))}
-  </div>
+  <Layout>
+    <div className={styles.article}>
+      <Helmet title={`归档 - ${config.title}`} />
+      <Title>归档</Title>
+      {group.reverse().map(({ fieldValue, totalCount, edges }, i) => (
+        <React.Fragment key={i}>
+          <h3>
+            {fieldValue}
+            {` (${totalCount})`}
+          </h3>
+          <ArchivesLinks posts={edges} />
+        </React.Fragment>
+      ))}
+    </div>
+  </Layout>
 )
 
 export default Archives
@@ -55,7 +58,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 2000
-      filter: { id: { regex: "/posts/" } }
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
     ) {
       group(field: fields___date) {
         fieldValue

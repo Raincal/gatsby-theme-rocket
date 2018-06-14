@@ -1,19 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Intro from '../components/Intro'
+import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import config from '../config'
-const TagTemplage = ({ pathContext, data }) => {
-  const { tag } = pathContext
-  const { edges, totalCount } = data.allMarkdownRemark
+const TagTemplage = ({ pageContext, data }) => {
+  const { tag } = pageContext
+  const { edges } = data.allMarkdownRemark
   const title = `标签${tag}下的文章`
 
   return (
-    <div>
+    <Layout>
       <Helmet title={`${title} - ${config.title}`} />
       <Intro tag={tag} />
       <Posts posts={edges} />
-    </div>
+    </Layout>
   )
 }
 
@@ -26,7 +27,6 @@ export const pageQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
-      totalCount
       edges {
         node {
           id
