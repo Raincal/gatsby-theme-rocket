@@ -4,8 +4,8 @@ const dayjs = require('dayjs')
 const createPaginatedPages = require('gatsby-paginate')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const path = node.frontmatter.path.toLowerCase()
     let slug = `/post/${path}/`
@@ -26,8 +26,8 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   }
 }
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
 
   const blogPostTemplate = path.resolve('src/templates/PostTemplate.jsx')
   const tagTemplate = path.resolve('src/templates/TagTemplate.jsx')
@@ -36,8 +36,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { id: { regex: "/posts/" } }
         limit: 2000
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
       ) {
         edges {
           node {
@@ -114,14 +114,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  config.merge({
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
     resolve: {
       alias: {
         styles: path.resolve(__dirname, 'src/styles'),
       },
     },
   })
-
-  return config
 }

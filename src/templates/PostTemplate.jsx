@@ -2,17 +2,18 @@ import Link from 'gatsby-link'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Comment from '../components/Comment'
+import Layout from '../components/Layout'
 import Pagination from '../components/Posts/Pagination'
 import Post from '../components/Posts/Post'
 import config from '../config'
 
-const PostTemplate = ({ pathContext, data }) => {
+const PostTemplate = ({ pageContext, data }) => {
   const { markdownRemark } = data
   return (
-    <div>
+    <Layout>
       <Helmet title={`${markdownRemark.frontmatter.title} - ${config.title}`} />
       <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
-      <Pagination {...pathContext}>
+      <Pagination {...pageContext}>
         {({ prev, next }) => (
           <div>
             {prev && (
@@ -29,7 +30,7 @@ const PostTemplate = ({ pathContext, data }) => {
         )}
       </Pagination>
       <Comment />
-    </div>
+    </Layout>
   )
 }
 

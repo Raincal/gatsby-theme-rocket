@@ -1,15 +1,16 @@
 import Link from 'gatsby-link'
 import React from 'react'
+import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import Pagination from '../components/Posts/Pagination'
 
-const IndexPage = ({ pathContext }) => {
-  const { group, index, first, last, pageCount } = pathContext
-  const previousUrl = index - 1 == 1 ? '' : (index - 1).toString()
+const IndexPage = ({ pageContext }) => {
+  const { group, index, first, last } = pageContext
+  const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
   const nextUrl = (index + 1).toString()
   const pageProps = { previousUrl, nextUrl, first, last }
   return (
-    <div>
+    <Layout>
       <Posts posts={group} />
       <Pagination {...pageProps}>
         {({ first, last, previousUrl, nextUrl }) => (
@@ -30,7 +31,7 @@ const IndexPage = ({ pathContext }) => {
           </div>
         )}
       </Pagination>
-    </div>
+    </Layout>
   )
 }
 
