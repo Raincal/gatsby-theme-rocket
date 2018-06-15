@@ -1,4 +1,4 @@
-import { navigateTo } from 'gatsby-link'
+import { navigateTo } from 'gatsby'
 import React from 'react'
 import styles from 'styles/profile.module.css'
 

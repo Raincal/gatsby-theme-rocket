@@ -3010,9 +3010,9 @@ dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
 
-dayjs@^1.6.6:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.6.6.tgz#2bb0d2e14f56301d364339140afcac6fb7e6e0e2"
+dayjs@^1.6.9:
+  version "1.6.9"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.6.9.tgz#b3568220ac9d71fc295392aaaa5cf9e0e00232f2"
 
 death@^1.0.0:
   version "1.1.0"

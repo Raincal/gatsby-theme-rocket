@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import Link, { navigateTo } from 'gatsby-link'
+import { Link, navigateTo } from 'gatsby'
 import React from 'react'
 import styles from 'styles/header.module.css'
 
