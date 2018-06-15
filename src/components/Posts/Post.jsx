@@ -1,4 +1,4 @@
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import React, { Fragment } from 'react'
 import styles from 'styles/posts.module.css'
 import Title from './Title'
