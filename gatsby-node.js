@@ -3,6 +3,8 @@ const path = require('path')
 const dayjs = require('dayjs')
 const createPaginatedPages = require('gatsby-paginate')
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const postcssPresetEnv = require('postcss-preset-env')
+const atImport = require('postcss-import')
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
@@ -114,8 +116,28 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
+exports.onCreateWebpackConfig = ({ actions, rules, loaders }) => {
   actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: [
+            loaders.postcss({
+              plugins: () => [
+                atImport(),
+                postcssPresetEnv({
+                  stage: 1,
+                  features: {
+                    'nesting-rules': true,
+                  },
+                }),
+              ],
+            }),
+          ],
+        },
+      ],
+    },
     resolve: {
       alias: {
         styles: path.resolve(__dirname, 'src/styles'),
