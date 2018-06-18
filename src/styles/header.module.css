@@ -88,7 +88,7 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  background-image: url('../images/avatar.png');
-  background-size: 100% 100%;
+  /* background-image: url("./images/avatar.png"); */
+  /* background-size: 100% 100%; */
   cursor: pointer;
 }
