@@ -1,10 +1,7 @@
 import { Link } from 'gatsby'
-import React, { Fragment } from 'react'
+import React from 'react'
 import styles from 'styles/posts.module.css'
 import Title from './Title'
-
-// https://github.com/developit/preact/issues/946#issuecomment-353151850
-React.Fragment = 'x-fragment'
 
 const Post = ({ post, isHome }) => {
   const { frontmatter, excerpt, html, tableOfContents, fields } = post
@@ -17,19 +14,19 @@ const Post = ({ post, isHome }) => {
         {isHome ? (
           <Link to={fields.slug}>{frontmatter.title}</Link>
         ) : (
-          <Fragment>{frontmatter.title}</Fragment>
+          <>{frontmatter.title}</>
         )}
       </Title>
       <div className={styles.content}>
         {isHome ? (
-          <Fragment>
+          <>
             {excerpt}
             <p className={styles.more}>
               <Link to={fields.slug}>阅读更多 »</Link>
             </p>
-          </Fragment>
+          </>
         ) : (
-          <Fragment>
+          <>
             {tableOfContents && (
               <div
                 className={styles.toc}
@@ -40,7 +37,7 @@ const Post = ({ post, isHome }) => {
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-          </Fragment>
+          </>
         )}
       </div>
     </article>
