@@ -38,6 +38,7 @@
     "build": "gatsby build",
     "build:prod": "npm run clean && gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
     "lint:md": "remark src/pages/",
     "format": "prettier --write 'src/**/*.{js,jsx}'",
