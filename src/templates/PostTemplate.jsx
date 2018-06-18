@@ -7,32 +7,29 @@ import Pagination from '../components/Posts/Pagination'
 import Post from '../components/Posts/Post'
 import config from '../config'
 
-const PostTemplate = ({ pageContext, data }) => {
-  const { markdownRemark } = data
-  return (
-    <Layout>
-      <Helmet title={`${markdownRemark.frontmatter.title} - ${config.title}`} />
-      <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
-      <Pagination {...pageContext}>
-        {({ prev, next }) => (
-          <div>
-            {prev && (
-              <Link style={{ float: 'left' }} to={prev.slug}>
-                {`« ${prev.title}`}
-              </Link>
-            )}
-            {next && (
-              <Link style={{ float: 'right' }} to={next.slug}>
-                {`${next.title} »`}
-              </Link>
-            )}
-          </div>
-        )}
-      </Pagination>
-      <Comment />
-    </Layout>
-  )
-}
+const PostTemplate = ({ pageContext, data: { markdownRemark } }) => (
+  <Layout>
+    <Helmet title={`${markdownRemark.frontmatter.title} - ${config.title}`} />
+    <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
+    <Pagination {...pageContext}>
+      {({ prev, next }) => (
+        <div>
+          {prev && (
+            <Link style={{ float: 'left' }} to={prev.slug}>
+              {`« ${prev.title}`}
+            </Link>
+          )}
+          {next && (
+            <Link style={{ float: 'right' }} to={next.slug}>
+              {`${next.title} »`}
+            </Link>
+          )}
+        </div>
+      )}
+    </Pagination>
+    <Comment />
+  </Layout>
+)
 
 export default PostTemplate
 

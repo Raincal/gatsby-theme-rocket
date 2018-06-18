@@ -18,17 +18,15 @@ const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
   },
-}) => {
-  return (
-    <Layout>
-      <div className={styles.article}>
-        <Helmet title={`标签 - ${config.title}`} />
-        <Title>标签</Title>
-        <Tags tags={group} />
-      </div>
-    </Layout>
-  )
-}
+}) => (
+  <Layout>
+    <div className={styles.article}>
+      <Helmet title={`标签 - ${config.title}`} />
+      <Title>标签</Title>
+      <Tags tags={group} />
+    </div>
+  </Layout>
+)
 
 export default TagsPage
 

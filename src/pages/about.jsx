@@ -5,15 +5,13 @@ import Layout from '../components/Layout'
 import Post from '../components/Posts/Post'
 import config from '../config'
 
-const About = ({ data: { markdownRemark } }) => {
-  return (
-    <Layout>
-      <Helmet title={`关于 - ${config.title}`} />
-      <Post post={markdownRemark} isHome={false} />
-      <Comment />
-    </Layout>
-  )
-}
+const About = ({ data: { markdownRemark } }) => (
+  <Layout>
+    <Helmet title={`关于 - ${config.title}`} />
+    <Post post={markdownRemark} isHome={false} />
+    <Comment />
+  </Layout>
+)
 
 export default About
 

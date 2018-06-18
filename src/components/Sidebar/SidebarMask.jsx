@@ -4,17 +4,15 @@ import styles from 'styles/sidebar-mask.module.css'
 
 let cx = classNames.bind(styles)
 
-const SidebarMask = ({ onCloseMask, showMask }) => {
-  return (
-    <div
-      onClick={onCloseMask}
-      onTouchStart={onCloseMask}
-      className={cx({
-        mask: true,
-        show: showMask,
-      })}
-    />
-  )
-}
+const SidebarMask = ({ onCloseMask, showMask }) => (
+  <div
+    onClick={onCloseMask}
+    onTouchStart={onCloseMask}
+    className={cx({
+      mask: true,
+      show: showMask,
+    })}
+  />
+)
 
 export default SidebarMask

@@ -7,7 +7,7 @@ const Profile = ({ title }) => (
   <div className={styles.profile}>
     <img
       src={avatar}
-      alt='avatar'
+      alt="avatar"
       className={styles.avatar}
       onClick={() => navigateTo('/')}
     />

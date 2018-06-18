@@ -14,19 +14,17 @@ const Sidebar = ({
   socialLinks,
   showMask,
   onCloseMaskDelay,
-}) => {
-  return (
-    <nav
-      className={cx({
-        sidebar: true,
-        show: showMask,
-      })}
-    >
-      <Profile title={title} />
-      <Buttons onCloseMaskDelay={onCloseMaskDelay} data={navButtons} />
-      <SocialButtons data={socialLinks} />
-    </nav>
-  )
-}
+}) => (
+  <nav
+    className={cx({
+      sidebar: true,
+      show: showMask,
+    })}
+  >
+    <Profile title={title} />
+    <Buttons onCloseMaskDelay={onCloseMaskDelay} data={navButtons} />
+    <SocialButtons data={socialLinks} />
+  </nav>
+)
 
 export default Sidebar
