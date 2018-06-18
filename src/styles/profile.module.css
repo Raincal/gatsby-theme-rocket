@@ -6,13 +6,13 @@
 .avatar {
   width: 140px;
   height: 140px;
+  display: block;
   border-radius: 70px;
-  background-image: url(../images/avatar.png);
-  background-size: 100% 100%;
+  /* background-image: url(../images/avatar.png); */
+  /* background-size: 100% 100%; */
   margin: 0 auto;
   cursor: pointer;
-  /* transition: all .2s; */
-  @media(max-width: 1024px) {
+  @media(--medium) {
     width: 40px;
     height: 40px;
   }
@@ -28,11 +28,7 @@
   text-align: center;
   font-size: 18px;
   color: #999;
-  /* transition: all .2s; */
   @media(--medium) {
     display: none;
   }
-  /* @media(--small) {
-    display: block;
-  } */
 }
