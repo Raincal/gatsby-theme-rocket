@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Comment from '../components/Comment'
 import Layout from '../components/Layout'

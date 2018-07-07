@@ -1,6 +1,6 @@
-import { StaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { graphql, StaticQuery } from 'gatsby'
 import 'styles/global/oceanic-next.css'
 import Header from '../Header'
 import Main from '../Main'

@@ -1,6 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
 import styles from 'styles/posts.module.css'
 import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
