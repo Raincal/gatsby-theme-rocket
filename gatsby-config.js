@@ -38,6 +38,7 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-no-sourcemaps',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-sitemap',

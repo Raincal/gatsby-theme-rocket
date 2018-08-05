@@ -14,6 +14,7 @@
     "gatsby-plugin-netlify": "next",
     "gatsby-plugin-no-sourcemaps": "next",
     "gatsby-plugin-offline": "next",
+    "gatsby-plugin-postcss": "^2.0.0-beta.2",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-sitemap": "next",
