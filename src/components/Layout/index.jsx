@@ -1,7 +1,8 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql, StaticQuery } from 'gatsby'
 import 'styles/global/oceanic-next.css'
+import Footer from '../Footer'
 import Header from '../Header'
 import Main from '../Main'
 import Sidebar from '../Sidebar'
@@ -80,7 +81,10 @@ class Layout extends React.Component {
               showMask={showMask}
               title={data.site.siteMetadata.title}
             />
-            <Main showMask={showMask}>{children}</Main>
+            <Main showMask={showMask}>
+              {children}
+              <Footer />
+            </Main>
           </div>
         )}
       />
