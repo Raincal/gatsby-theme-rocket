@@ -1,0 +1,20 @@
+import { Helmet } from 'react-helmet'
+import Layout from '../components/Layout'
+import Post from '../components/Posts/Post'
+import Title from '../components/Posts/Title'
+import config from '../config'
+import styles from 'styles/posts.module.css'
+
+export default ({ children }) => (
+  <Layout>
+    <Helmet title={`关于 - ${config.title}`} />
+    <article className={styles.article}>
+      <Title>关于</Title>
+      <div className={styles.content}>
+        <>{children}</>
+      </div>
+    </article>
+  </Layout>
+)
+
+Powered By Gatsby
