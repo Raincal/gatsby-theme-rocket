@@ -1,5 +1,4 @@
 const config = require('./src/config')
-const rootDir = 'public'
 
 module.exports = {
   siteMetadata: {
@@ -62,33 +61,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
-        navigateFallback: null,
-        navigateFallbackWhitelist: [],
-        staticFileGlobs: [
-          `${rootDir}/**/*.ttf`,
-          `${rootDir}/app-*js`,
-          `${rootDir}/component-*js`,
-          `${rootDir}/index.html`,
-          `${rootDir}/manifest.json`,
-          `${rootDir}/manifest.webmanifest`,
-          `${rootDir}/offline-plugin-app-shell-fallback/index.html`,
-        ],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/cdn\.jsdelivr\.net/,
-            handler: 'cacheFirst',
+            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|ttf|woff|woff2|json|html|css)$/,
+            handler: `staleWhileRevalidate`,
           },
           {
-            urlPattern: /\/static\//,
-            handler: `cacheFirst`,
-          },
-          {
-            urlPattern: /^(?!https:\/\/raincal-blog-disqus\.now\.sh).*\/\w+([/\w.-]+)?\/$/,
-            handler: 'cacheFirst',
-          },
-          {
-            urlPattern: /\.(?:js|css|json|ttf|woff|woff2)$/,
-            handler: `fastest`,
+            urlPattern: /^https:/,
+            handler: `networkFirst`,
           },
         ],
       },
