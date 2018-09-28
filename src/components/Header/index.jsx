@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import { Link, push } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import React from 'react'
 import styles from 'styles/header.module.css'
 
@@ -25,7 +25,7 @@ const Header = ({ title, showMask, toggle }) => (
     <h1>
       <Link to="/">{title}</Link>
     </h1>
-    <div className={styles.about} onClick={() => push('/about/')} />
+    <div className={styles.about} onClick={() => navigate('/about/')} />
   </header>
 )
 
