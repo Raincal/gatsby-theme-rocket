@@ -22,9 +22,9 @@
 .header a {
   font-size: 1rem;
   vertical-align: top;
-  color: #999;
+  color: #9c9c9c;
   &:hover {
-    color: #999;
+    color: #9c9c9c;
   }
 }
 

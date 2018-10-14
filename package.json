@@ -1,7 +1,7 @@
 {
   "name": "gatsby-firekylin",
   "description": "Gatsby Firekylin",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Raincal <raincal.chen@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.15.5",
