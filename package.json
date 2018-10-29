@@ -27,11 +27,11 @@
     "gatsby-source-filesystem": "latest",
     "gatsby-transformer-remark": "latest",
     "lodash": "^4.17.11",
-    "postcss-import": "^12.0.0",
-    "postcss-preset-env": "^6.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.3.0",
     "prismjs": "^1.15.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "next",
+    "react-dom": "next",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "prettier": "^1.14.3",
-    "remark-cli": "^5.0.0",
+    "remark-cli": "^6.0.0",
     "remark-preset-lint-recommended": "^3.0.2"
   },
   "remarkConfig": {
