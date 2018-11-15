@@ -63,12 +63,16 @@ module.exports = {
       options: {
         runtimeCaching: [
           {
-            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|ttf|woff|woff2|json|html|css)$/,
+            urlPattern: /(\.js$|\.css$|\/static\/)/,
+            handler: `cacheFirst`,
+          },
+          {
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|ttf|woff|woff2|json|css)$/,
             handler: `staleWhileRevalidate`,
           },
           {
-            urlPattern: /^https:/,
-            handler: `networkFirst`,
+            urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+            handler: `staleWhileRevalidate`,
           },
         ],
       },

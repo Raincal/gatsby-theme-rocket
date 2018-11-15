@@ -1,11 +1,11 @@
 {
   "name": "gatsby-firekylin",
   "description": "Gatsby Firekylin",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "Raincal <raincal.chen@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.5",
-    "@mdx-js/tag": "^0.15.0",
+    "@mdx-js/mdx": "^0.16.0",
+    "@mdx-js/tag": "^0.16.0",
     "classnames": "^2.2.6",
     "dayjs": "^1.7.7",
     "gatsby": "latest",
@@ -28,7 +28,7 @@
     "gatsby-transformer-remark": "latest",
     "lodash": "^4.17.11",
     "postcss-import": "^12.0.1",
-    "postcss-preset-env": "^6.3.0",
+    "postcss-preset-env": "^6.4.0",
     "prismjs": "^1.15.0",
     "react": "next",
     "react-dom": "next",
@@ -50,7 +50,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.3",
+    "prettier": "^1.15.2",
     "remark-cli": "^6.0.0",
     "remark-preset-lint-recommended": "^3.0.2"
   },
