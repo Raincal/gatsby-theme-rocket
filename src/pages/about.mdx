@@ -1,20 +1,7 @@
-import { Helmet } from 'react-helmet'
-import Layout from '../components/Layout'
-import Post from '../components/Posts/Post'
-import Title from '../components/Posts/Title'
-import config from '../config'
-import styles from 'styles/posts.module.css'
+import PageLayout from '../components/PageLayout'
 
 export default ({ children }) => (
-  <Layout>
-    <Helmet title={`关于 - ${config.title}`} />
-    <article className={styles.article}>
-      <Title>关于</Title>
-      <div className={styles.content}>
-        <>{children}</>
-      </div>
-    </article>
-  </Layout>
+  <PageLayout title="关于">{children}</PageLayout>
 )
 
 Powered By Gatsby

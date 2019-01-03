@@ -1,6 +1,7 @@
+import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import 'styles/global/oceanic-next.css'
 import Comment from '../components/Comment'
 import Layout from '../components/Layout'
 import Pagination from '../components/Posts/Pagination'

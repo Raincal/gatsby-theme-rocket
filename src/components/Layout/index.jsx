@@ -1,7 +1,6 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import 'styles/global/oceanic-next.css'
 import Footer from '../Footer'
 import Header from '../Header'
 import Main from '../Main'
