@@ -2,7 +2,6 @@ const _ = require('lodash')
 const path = require('path')
 const dayjs = require('dayjs')
 const createPaginatedPages = require('gatsby-paginate')
-const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
@@ -70,8 +69,8 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(({ node }, index) => {
       const slug = node.fields.slug
-      let prev = index === 0 ? null : posts[index - 1].node
-      let next = index === posts.length - 1 ? null : posts[index + 1].node
+      let prev = index === posts.length - 1 ? null : posts[index + 1].node
+      let next = index === 0 ? null : posts[index - 1].node
       prev = prev && {
         slug: prev.fields.slug,
         title: prev.frontmatter.title,
