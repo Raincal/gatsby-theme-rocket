@@ -1,6 +1,6 @@
+import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
 import styles from 'styles/posts.module.css'
 import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
@@ -58,7 +58,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 2000
-      filter: { fileAbsolutePath: { regex: "/posts/" } }
     ) {
       group(field: fields___date) {
         fieldValue
