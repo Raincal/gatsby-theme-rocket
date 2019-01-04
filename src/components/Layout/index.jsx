@@ -25,7 +25,6 @@ const Layout = ({ children }) => {
   }
 
   const onCloseMask = e => {
-    e.preventDefault()
     closeMask()
   }
 
