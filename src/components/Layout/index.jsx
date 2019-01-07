@@ -1,6 +1,5 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useEffect, useState } from 'react'
-import { Helmet } from 'react-helmet'
 import Footer from '../Footer'
 import Header from '../Header'
 import Main from '../Main'
@@ -63,11 +62,6 @@ const Layout = ({ children }) => {
       `}
       render={data => (
         <div>
-          <Helmet title={data.site.siteMetadata.title}>
-            <meta name="description" content="Blog" />
-            <meta name="keywords" content="Raincal, Blog" />
-            <html lang="zh-CN" />
-          </Helmet>
           <Sidebar
             onCloseMaskDelay={onCloseMaskDelay}
             showMask={showMask}

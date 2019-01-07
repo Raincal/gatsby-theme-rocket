@@ -1,10 +1,9 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from 'react'
 import Intro from '../components/Intro'
 import Layout from '../components/Layout'
 import Posts from '../components/Posts'
-import config from '../config'
+import SEO from '../components/Seo'
 const TagTemplage = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges } = data.allMarkdownRemark
@@ -12,7 +11,7 @@ const TagTemplage = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Helmet title={`${title} - ${config.title}`} />
+      <SEO title={title} />
       <Intro tag={tag} />
       <Posts posts={edges} />
     </Layout>

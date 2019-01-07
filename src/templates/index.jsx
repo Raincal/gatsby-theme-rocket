@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import Pagination from '../components/Posts/Pagination'
+import SEO from '../components/Seo'
 
 const IndexPage = ({ pageContext }) => {
   const { group, index, first, last } = pageContext
@@ -11,6 +12,10 @@ const IndexPage = ({ pageContext }) => {
   const pageProps = { previousUrl, nextUrl, first, last }
   return (
     <Layout>
+      <SEO
+        title="所有文章"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`, `raincal`]}
+      />
       <Posts posts={group} />
       <Pagination {...pageProps}>
         {({ first, last, previousUrl, nextUrl }) => (

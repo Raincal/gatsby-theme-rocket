@@ -1,10 +1,9 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import styles from 'styles/posts.module.css'
 import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
-import config from '../config'
+import SEO from '../components/Seo'
 
 const ArchivesLinks = ({ posts }) => (
   <ul style={{ lineHeight: 1.8 }}>
@@ -36,7 +35,7 @@ const Archives = ({
 }) => (
   <Layout>
     <div className={styles.article}>
-      <Helmet title={`归档 - ${config.title}`} />
+      <SEO title="归档" />
       <Title>归档</Title>
       {group.reverse().map(({ fieldValue, totalCount, edges }, i) => (
         <React.Fragment key={i}>

@@ -1,11 +1,10 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import React from 'react'
 import styles from 'styles/posts.module.css'
 import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
+import SEO from '../components/Seo'
 import Tag from '../components/Tag'
-import config from '../config'
 
 const Tags = ({ tags }) => (
   <ul style={{ marginLeft: 0 }}>
@@ -22,7 +21,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <div className={styles.article}>
-      <Helmet title={`标签 - ${config.title}`} />
+      <SEO title="标签" />
       <Title>标签</Title>
       <Tags tags={group} />
     </div>

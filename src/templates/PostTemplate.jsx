@@ -1,16 +1,15 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import 'styles/global/oceanic-next.css'
 import Comment from '../components/Comment'
 import Layout from '../components/Layout'
 import Pagination from '../components/Posts/Pagination'
 import Post from '../components/Posts/Post'
-import config from '../config'
+import SEO from '../components/Seo'
 
 const PostTemplate = ({ pageContext, data: { markdownRemark } }) => (
   <Layout>
-    <Helmet title={`${markdownRemark.frontmatter.title} - ${config.title}`} />
+    <SEO title={markdownRemark.frontmatter.title} />
     <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
     <Pagination {...pageContext}>
       {({ prev, next }) => (

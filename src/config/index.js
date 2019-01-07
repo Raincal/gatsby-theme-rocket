@@ -4,6 +4,7 @@ module.exports = {
   siteUrl,
   title: "Raincal's Blog",
   description: 'Web developer/React/Node.js',
+  author: 'Raincal',
   navButtons: [
     { name: '首页', icon: 'home', url: '/' },
     { name: '归档', icon: 'archive', url: '/archives/' },
