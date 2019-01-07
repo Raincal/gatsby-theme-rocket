@@ -9,7 +9,11 @@ import SEO from '../components/Seo'
 
 const PostTemplate = ({ pageContext, data: { markdownRemark } }) => (
   <Layout>
-    <SEO title={markdownRemark.frontmatter.title} />
+    <SEO
+      title={markdownRemark.frontmatter.title}
+      keywords={markdownRemark.frontmatter.tags}
+      description={markdownRemark.excerpt}
+    />
     <Post key={markdownRemark.id} post={markdownRemark} isHome={false} />
     <Pagination {...pageContext}>
       {({ prev, next }) => (
@@ -38,10 +42,12 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       # tableOfContents
+      excerpt(pruneLength: 150)
       frontmatter {
         date(formatString: "MM月DD, YYYY")
         path
         title
+        tags
       }
     }
   }
