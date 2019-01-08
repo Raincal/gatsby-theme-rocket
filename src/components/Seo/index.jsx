@@ -13,6 +13,7 @@ const SEO = ({ description, lang, meta, keywords, title }) => (
             lang,
           }}
           title={title}
+          defaultTitle={data.site.siteMetadata.title}
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
           meta={[
             {
