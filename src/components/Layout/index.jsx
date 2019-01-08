@@ -41,25 +41,7 @@ const Layout = ({ children }) => {
 
   return (
     <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-              navButtons {
-                name
-                icon
-                url
-              }
-              socialLinks {
-                name
-                icon
-                url
-              }
-            }
-          }
-        }
-      `}
+      query={layoutQuery}
       render={data => (
         <div>
           <Sidebar
@@ -84,3 +66,23 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+
+const layoutQuery = graphql`
+  query SiteInfoQuery {
+    site {
+      siteMetadata {
+        title
+        navButtons {
+          name
+          icon
+          url
+        }
+        socialLinks {
+          name
+          icon
+          url
+        }
+      }
+    }
+  }
+`

@@ -7,6 +7,7 @@ const Pagination = props => (
       borderBottom: '1px solid #ddd',
       padding: '20px 0',
       overflow: 'hidden',
+      fontSize: 14,
     }}
   >
     {props.children(props)}
