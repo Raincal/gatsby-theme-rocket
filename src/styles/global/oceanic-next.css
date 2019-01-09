@@ -18,13 +18,13 @@
 }
 
 .gatsby-highlight {
+  font-family: source-code-pro, Menlo, Consolas, Monaco, 'Andale Mono',
+    'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
   background: var(--dark);
   color: var(--white);
   border-radius: 5px;
-  overflow: auto;
   tab-size: 1.5em;
-  margin: 25px 0px;
-  padding: 0 15px;
   position: relative;
   @media (--vert-small) {
     margin: 0 -20px;
@@ -32,31 +32,12 @@
   }
 }
 
-.gatsby-highlight pre[class*='language-'] {
-  background-color: transparent;
-  float: left;
-  min-width: 100%;
-}
-
-.gatsby-highlight code[class*='language-'],
-.gatsby-highlight pre[class*='language-'],
-.gatsby-highlight pre.prism-code {
-  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
-    monospace !important;
-  height: auto !important;
-  font-size: 14px;
-  line-height: 20px;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.gatsby-highlight pre[class*='language-']::before {
+.gatsby-highlight::before {
   position: absolute;
   top: 0px;
   right: 20px;
   padding: 1px 10px;
   font-size: 12px;
-  text-align: right;
   color: #444;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -64,94 +45,100 @@
   border-radius: 0 0 5px 5px;
   background: #ddd;
   @media (--vert-small) {
-    background: rgba(0, 0, 0, 0) !important;
+    background-color: transparent !important;
     color: #dddddd19;
-    font-size: 30px;
     top: 10px;
-    right: 0;
+    right: 10px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
-.gatsby-highlight pre[class='language-javascript']::before {
+.gatsby-highlight[data-language='javascript']::before {
   content: 'js';
   background: #f7df1e;
 }
 
-.gatsby-highlight pre[class='language-js']::before {
+.gatsby-highlight[data-language='js']::before {
   content: 'js';
   background: #f7df1e;
 }
 
-.gatsby-highlight pre[class='language-jsx']::before {
+.gatsby-highlight[data-language='jsx']::before {
   content: 'jsx';
   background: #61dafb;
 }
 
-.gatsby-highlight pre[class='language-graphql']::before {
+.gatsby-highlight[data-language='graphql']::before {
   content: 'GraphQL';
   background: #e10098;
   color: #fff;
   font-weight: 400;
 }
 
-.gatsby-highlight pre[class='language-html']::before {
+.gatsby-highlight[data-language='html']::before {
   content: 'html';
   background: #005a9c;
   color: #fff;
   font-weight: 400;
 }
 
-.gatsby-highlight pre[class='language-css']::before {
+.gatsby-highlight[data-language='css']::before {
   content: 'css';
   background: #ff9800;
   color: #fff;
   font-weight: 400;
 }
 
-.gatsby-highlight pre[class='language-shell']::before {
+.gatsby-highlight[data-language='shell']::before {
   content: 'shell';
 }
 
-.gatsby-highlight pre[class='language-sh']::before {
+.gatsby-highlight[data-language='sh']::before {
   content: 'sh';
 }
 
-.gatsby-highlight pre[class='language-bash']::before {
+.gatsby-highlight[data-language='bash']::before {
   content: 'bash';
 }
 
-.gatsby-highlight pre[class='language-yaml']::before {
+.gatsby-highlight[data-language='yaml']::before {
   content: 'yaml';
   background: #ffa8df;
 }
 
-.gatsby-highlight pre[class='language-markdown']::before {
+.gatsby-highlight[data-language='markdown']::before {
   content: 'md';
 }
 
-.gatsby-highlight pre[class='language-json']::before,
-.gatsby-highlight pre[class='language-json5']::before {
+.gatsby-highlight[data-language='json']::before,
+.gatsby-highlight[data-language='json5']::before {
   content: 'json';
   background: linen;
 }
 
-.gatsby-highlight pre[class='language-diff']::before {
+.gatsby-highlight[data-language='diff']::before {
   content: 'diff';
   background: #e6ffed;
 }
 
-.gatsby-highlight pre[class='language-text']::before {
+.gatsby-highlight[data-language='text']::before {
   content: 'text';
   background: #fff;
 }
 
-.gatsby-highlight pre[class='language-flow']::before {
+.gatsby-highlight[data-language='flow']::before {
   content: 'flow';
   background: #e8bd36;
 }
 
-.gatsby-highlight + .gatsby-highlight {
-  margin-top: 20px;
+.gatsby-highlight pre[class*='language-'] {
+  background-color: transparent;
+  line-height: 1.4;
+  padding: 20px;
+  margin: 0.85rem 0;
+  overflow: auto;
 }
 
 .gatsby-highlight-code-line {

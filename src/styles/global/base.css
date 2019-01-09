@@ -3,9 +3,10 @@ body {
   padding: 0;
   color: #666;
   -webkit-text-size-adjust: none;
-  transition: transform .2s cubic-bezier(.4, .01, .165, .99);
+  transition: transform 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   -webkit-tap-highlight-color: transparent;
-  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti,
+    'Microsoft YaHei';
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
 }
@@ -14,6 +15,7 @@ body,
 html {
   width: 100%;
   height: 100%;
+  font-size: 16px;
 }
 
 h1,
@@ -34,7 +36,7 @@ a:hover {
 
 ul,
 ol {
-  padding: 0
+  padding: 0;
 }
 
 ul {
@@ -74,10 +76,10 @@ td,
 th {
   text-align: left;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
-  font-feature-settings: "tnum";
-  -moz-font-feature-settings: "tnum";
-  -ms-font-feature-settings: "tnum";
-  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
   padding-left: 0.96667rem;
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
