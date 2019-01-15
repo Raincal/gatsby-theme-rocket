@@ -59,6 +59,28 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        runtimeCaching: [
+          {
+            urlPattern: /.*\/$/,
+            handler: `networkFirst`,
+          },
+          {
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `cacheFirst`,
+          },
+          {
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `staleWhileRevalidate`,
+          },
+          {
+            urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+            handler: `staleWhileRevalidate`,
+          },
+        ],
+      },
+    },
   ],
 }
