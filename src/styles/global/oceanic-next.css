@@ -135,19 +135,26 @@
 
 .gatsby-highlight pre[class*='language-'] {
   background-color: transparent;
-  line-height: 1.4;
+  line-height: 1.5;
   padding: 20px;
   margin: 0.85rem 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gatsby-highlight pre code {
+  display: block;
+  float: left;
+  min-width: 100%;
+  font-family: source-code-pro, Menlo, Consolas, Monaco, 'Andale Mono',
+    'Ubuntu Mono', monospace;
 }
 
 .gatsby-highlight-code-line {
   background-color: var(--lineHighlight);
   display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  margin: -0.125rem -15px;
-  padding: 0.125rem 15px;
+  margin: 0 -20px;
+  padding: 0.125rem 20px;
 }
 
 .token.attr-name {
