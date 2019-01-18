@@ -8,6 +8,14 @@
   }
 }
 
+.article img {
+  border: 1px solid #ccc;
+  display: block;
+  margin: 10px 0 5px;
+  max-width: 100%;
+  padding: 0;
+}
+
 .meta {
   float: right;
   font-size: .9em;
