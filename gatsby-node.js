@@ -2,12 +2,15 @@ const _ = require('lodash')
 const path = require('path')
 const dayjs = require('dayjs')
 const createPaginatedPages = require('gatsby-paginate')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.onCreateNode = ({ node, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const path = node.frontmatter.path.toLowerCase()
-    let slug = `/post/${path}/`
+    const path = node.frontmatter.path
+      ? `/${node.frontmatter.path.toLowerCase()}/`
+      : createFilePath({ node, getNode, basePath: 'posts' })
+    let slug = `/post${path}`
     if (node.frontmatter.type) {
       slug = `/${node.frontmatter.type}/`
     }
