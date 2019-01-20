@@ -45,7 +45,6 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 150)
       frontmatter {
         date(formatString: "MM月DD, YYYY")
-        path
         title
         tags
       }

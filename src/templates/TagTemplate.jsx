@@ -4,6 +4,7 @@ import Intro from '../components/Intro'
 import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import SEO from '../components/Seo'
+
 const TagTemplage = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges } = data.allMarkdownRemark
@@ -36,7 +37,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MM月DD,YYYY")
-            path
             title
           }
         }
