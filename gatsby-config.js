@@ -22,6 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-source-yuque",
       options: {
+        baseUrl: "https://yunque.moelab.me/api/v2/",
         login: "raincal",
         repo: "blog",
         mdNameFormat: "slug",
