@@ -20,11 +20,25 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-yuque",
+      options: {
+        login: "raincal",
+        repo: "blog",
+        mdNameFormat: "slug",
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-yuque-images',
+            options: {
+              maxWidth: 1060,
+            },
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {

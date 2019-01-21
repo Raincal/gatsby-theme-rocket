@@ -1,16 +1,16 @@
 {
   "name": "gatsby-firekylin",
   "description": "Gatsby Firekylin",
-  "version": "2.0.10",
-  "author": "Raincal <raincal.chen@gmail.com>",
+  "version": "2.0.11",
+  "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
     "classnames": "^2.2.6",
-    "dayjs": "^1.7.8",
-    "gatsby": "^2.0.90",
-    "gatsby-mdx": "^0.3.3",
-    "gatsby-paginate": "^1.0.16",
+    "dayjs": "^1.8.0",
+    "gatsby": "^2.0.91",
+    "gatsby-mdx": "^0.3.5",
+    "gatsby-paginate": "^1.0.17",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-manifest": "^2.0.13",
@@ -24,7 +24,9 @@
     "gatsby-remark-autolink-headers": "^2.0.12",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-source-filesystem": "^2.0.13",
+    "gatsby-remark-yuque-images": "^0.0.4",
+    "gatsby-source-filesystem": "^2.0.16",
+    "gatsby-source-yuque": "^0.0.2",
     "gatsby-transformer-remark": "^2.2.0",
     "lodash": "^4.17.11",
     "postcss-import": "^12.0.1",
@@ -41,7 +43,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "build:prod": "npm run clean && gatsby build",
+    "build:prod": "yarn clean && yarn build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
@@ -50,7 +52,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.15.3",
+    "prettier": "^1.16.0",
     "remark-cli": "^6.0.1",
     "remark-preset-lint-recommended": "^3.0.2"
   },
