@@ -1,6 +1,6 @@
 ---
 title: "Mac OS 终端使用 subl 运行 Sublime Text 3"
-path: "launch-sublime-text-from-command-line"
+slug: "launch-sublime-text-from-command-line"
 date: "2015-05-09"
 tags: [macOS, Sublime, Editor]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "grub rescue 模式下修复 Linux 引导"
-path: "grub-rescue"
+slug: "grub-rescue"
 date: "2017-11-22"
 tags: ["Linux", "grub", "Arch"]
 categories: ["Linux"]

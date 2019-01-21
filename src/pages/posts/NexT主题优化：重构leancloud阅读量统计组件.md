@@ -1,6 +1,6 @@
 ---
 title: "NexT 主题优化：重构 leancloud 阅读量统计模块"
-path: "hexo-next-optimize-leancloud"
+slug: "hexo-next-optimize-leancloud"
 date: "2018-02-11"
 tags: [Next, Leancloud]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hello 2018"
-path: "Hello-2018"
+slug: "Hello-2018"
 date: "2018-01-01"
 tags: [picture]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mongoDB 常用命令"
-path: "mongodb-command"
+slug: "mongodb-command"
 date: "2015-07-10"
 tags: ["mongoDB"]
 categories: ["mongoDB"]

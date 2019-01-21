@@ -1,6 +1,6 @@
 ---
 title: "Gogs 与主机共享 22 端口"
-path: "gogs-share-22-port"
+slug: "gogs-share-22-port"
 date: "2018-03-10"
 tags: [Gogs, Git, SSH, Docker]
 ---

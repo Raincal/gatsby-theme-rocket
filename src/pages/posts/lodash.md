@@ -1,6 +1,6 @@
 ---
 title: "10 个可用 ES6 替代的 Lodash 特性"
-path: "lodash"
+slug: "lodash"
 date: "2016-06-30"
 tags: [lodash]
 ---

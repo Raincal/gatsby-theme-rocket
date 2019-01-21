@@ -1,6 +1,6 @@
 ---
 title: "使用 Docker 部署 FlarumChina"
-path: "deploy-flarumChina-with-docker"
+slug: "deploy-flarumChina-with-docker"
 date: "2017-08-07"
 tags: ["Docker", "Linux"]
 ---
