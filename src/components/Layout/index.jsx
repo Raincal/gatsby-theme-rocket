@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   }
 
   const onCloseMaskDelay = () => {
-    window.___emitter.on(`onPostLoadPageResources`, () => {
+    window.___emitter.on('onPostLoadPageResources', () => {
       closeMask()
     })
   }

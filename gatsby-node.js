@@ -2,11 +2,10 @@ const _ = require('lodash')
 const path = require('path')
 const dayjs = require('dayjs')
 const createPaginatedPages = require('gatsby-paginate')
-const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     let slug = node.frontmatter.slug.toString().toLowerCase()
     slug = `/post/${slug}/`
     if (node.frontmatter.type) {
@@ -15,12 +14,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const date = dayjs(node.frontmatter.date).format('YYYY年MM月')
     createNodeField({
       node,
-      name: `slug`,
+      name: 'slug',
       value: slug,
     })
     createNodeField({
       node,
-      name: `date`,
+      name: 'date',
       value: date,
     })
   }
@@ -113,7 +112,7 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ actions, rules, loaders }) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {

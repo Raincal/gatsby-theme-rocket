@@ -2,7 +2,7 @@ const siteUrl = 'https://blog.raincal.com'
 
 module.exports = {
   siteUrl,
-  title: "Raincal's Blog",
+  title: 'Raincal\'s Blog',
   description: 'Web developer/React/Node.js',
   author: 'Raincal',
   navButtons: [

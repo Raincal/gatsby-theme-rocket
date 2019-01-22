@@ -3,7 +3,7 @@ import { Link, navigate } from 'gatsby'
 import React from 'react'
 import styles from 'styles/header.module.css'
 
-let cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 const Header = ({ title, showMask, toggle }) => (
   <header

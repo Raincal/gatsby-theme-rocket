@@ -6,7 +6,7 @@ import Buttons from './Buttons'
 import Profile from './Profile'
 import SocialButtons from './SocialButtons'
 
-let cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 const Sidebar = ({
   title,

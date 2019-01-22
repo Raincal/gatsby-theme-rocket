@@ -12,7 +12,7 @@ const IndexPage = ({ pageContext }) => {
   const pageProps = { previousUrl, nextUrl, first, last }
   return (
     <Layout>
-      <SEO keywords={[`blog`, `gatsby`, `javascript`, `react`, `raincal`]} />
+      <SEO keywords={['blog', 'gatsby', 'javascript', 'react', 'raincal']} />
       <Posts posts={group} />
       <Pagination {...pageProps}>
         {({ first, last, previousUrl, nextUrl }) => (

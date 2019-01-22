@@ -1,7 +1,7 @@
 {
   "name": "gatsby-firekylin",
   "description": "Gatsby Firekylin",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
@@ -47,11 +47,15 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
+    "format:code": "npm run lint:code -- --fix",
+    "lint:code": "eslint --ignore-path .gitignore --ext .js,.jsx .",
     "lint:md": "remark src/pages/",
     "format": "prettier --write 'src/**/*.{js,jsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-plugin-react": "^7.12.4",
     "prettier": "^1.16.0",
     "remark-cli": "^6.0.1",
     "remark-preset-lint-recommended": "^3.0.2"

@@ -20,12 +20,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-yuque",
+      resolve: 'gatsby-source-yuque',
       options: {
-        baseUrl: "https://yunque.moelab.me/api/v2/",
-        login: "raincal",
-        repo: "blog",
-        mdNameFormat: "slug",
+        login: 'raincal',
+        repo: 'blog',
+        mdNameFormat: 'slug',
       },
     },
     {
@@ -65,7 +64,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Raincal's Blog",
+        name: 'Raincal\'s Blog',
         short_name: 'Raincal',
         start_url: '/',
         background_color: '#f7f0eb',
@@ -80,19 +79,19 @@ module.exports = {
         runtimeCaching: [
           {
             urlPattern: /.*\/$/,
-            handler: `networkFirst`,
+            handler: 'networkFirst',
           },
           {
             urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`,
+            handler: 'cacheFirst',
           },
           {
             urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`,
+            handler: 'staleWhileRevalidate',
           },
           {
             urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
-            handler: `staleWhileRevalidate`,
+            handler: 'staleWhileRevalidate',
           },
         ],
       },
