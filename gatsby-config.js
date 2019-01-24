@@ -55,6 +55,7 @@ module.exports = {
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-postcss',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-brotli',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
