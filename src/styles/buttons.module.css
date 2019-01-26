@@ -7,8 +7,8 @@
 }
 
 .buttons li {
-  height: 45px;
-  line-height: 45px;
+  height: 44px;
+  line-height: 44px;
   font-size: 16px;
 }
 
@@ -26,8 +26,9 @@
   font-size: 20px;
   text-align: center;
   width: 25px;
-  height: 45px;
+  height: 44px;
   margin-right: 20px;
+  font-style: normal;
   display: inline-block;
 }
 
@@ -40,7 +41,37 @@
   @media (--medium) {
     display: none;
   }
-  @media(--small) {
-    display: inline-block;
+}
+
+@media(--small) {
+  .buttons:nth-child(3) {
+    display: none;
+  }
+  .buttons {
+    display: flex;
+  }
+  .buttons li {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* line-height: 44px; */
+  }
+  .buttons li a {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .buttons li a i {
+    margin: 0;
+    color: #182543;
+  }
+  .active {
+    background: #243c6d;
+  }
+  .buttons .active i{
+    color: #ffffff;
+  }
+  .title {
+    display: none;
   }
 }

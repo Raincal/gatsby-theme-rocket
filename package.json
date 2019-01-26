@@ -1,12 +1,11 @@
 {
-  "name": "gatsby-firekylin",
-  "description": "Gatsby Firekylin",
-  "version": "2.0.15",
+  "name": "gatsby-rocket-blog",
+  "description": ":rocket: A super fast blog",
+  "version": "2.0.16",
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
-    "classnames": "^2.2.6",
     "dayjs": "^1.8.0",
     "gatsby": "^2.0.95",
     "gatsby-mdx": "^0.3.5",
@@ -52,10 +51,9 @@
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public",
     "format:code": "npm run lint:code -- --fix",
-    "lint:code": "eslint --ignore-path .gitignore --ext .js,.jsx .",
+    "lint:code": "eslint --ignore-path .gitignore --ignore-pattern /functions --ext .js,.jsx .",
     "lint:md": "remark src/pages/",
-    "format": "prettier --write 'src/**/*.{js,jsx}'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write 'src/**/*.{js,jsx}'"
   },
   "devDependencies": {
     "eslint": "^5.12.1",

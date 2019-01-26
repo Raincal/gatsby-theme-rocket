@@ -1,6 +1,9 @@
 @import './_variables.css';
 .profile {
   padding: 40px 0 10px 0;
+  @media (--small) {
+    display: none;
+  }
 }
 
 .avatar {

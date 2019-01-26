@@ -1,22 +1,22 @@
-# Gatsby Firekylin
+# Gatsby Rocket Blog
 
-A simple blog built with Gatsby.
+A super fast blog built with Gatsby.
 
 ## Development
 
 Install dependencies:
 
 ```sh
-cd gatsby-firekylin
+cd gatsby-rocket-blog
 yarn
 ```
 
 Then you can run it by:
 
 ```sh
-npm run develop
+yarn develop
 ```
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Raincal/gatsby-firekylin)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Raincal/gatsby-rocket-blog)

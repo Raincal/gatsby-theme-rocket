@@ -3,9 +3,9 @@ import styles from 'styles/footer.module.css'
 
 const Footer = () => (
   <footer className={styles.footer}>
-    © {new Date().getFullYear()} - {'Raincal\'s'} Blog -&nbsp;
+    © 2019 - {'Raincal\'s'} Blog -&nbsp;
     <a
-      href="https://github.com/Raincal/gatsby-firekylin"
+      href="https://github.com/Raincal/gatsby-rocket-blog"
       target="_blank"
       rel="noopener noreferrer"
     >

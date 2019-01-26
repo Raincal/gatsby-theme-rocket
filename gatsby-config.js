@@ -75,7 +75,7 @@ module.exports = {
         short_name: 'Raincal',
         start_url: '/',
         background_color: '#f7f0eb',
-        theme_color: '#323436',
+        theme_color: '#3b5998',
         display: 'minimal-ui',
         icon: 'src/images/icon.png',
       },

@@ -8,13 +8,7 @@
     padding-left: 115px;
   }
   @media(--small) {
-    transition: all .2s cubic-bezier(.4, .01, .165, .99);
-    padding: 50px 20px 0;
+    padding: 6px 20px 0;
     word-break: break-word;
   }
-}
-
-.show {
-  transform: translate3D(250px, 0, 0);
-  position: fixed;
 }
