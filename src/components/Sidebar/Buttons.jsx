@@ -6,7 +6,7 @@ const Buttons = ({ data }) => (
   <ul className={styles.buttons}>
     {data.map((button, i) => (
       <li key={i}>
-        <Link to={button.url} activeClassName={styles.active}>
+        <Link to={button.url} aria-label={button.name} activeClassName={styles.active}>
           <i className={`iconfont icon-${button.icon}`} />
           <span className={styles.title}>{button.name}</span>
         </Link>
