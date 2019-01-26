@@ -49,6 +49,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/components/Layout/index.jsx')
+      }
+    },
+    {
       resolve: 'gatsby-plugin-feed',
     },
     'gatsby-plugin-catch-links',

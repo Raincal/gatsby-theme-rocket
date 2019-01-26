@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import Intro from '../components/Intro'
-import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import SEO from '../components/Seo'
 
@@ -11,11 +10,11 @@ const TagTemplage = ({ pageContext, data }) => {
   const title = `标签${tag}下的文章`
 
   return (
-    <Layout>
+    <>
       <SEO title={title} />
       <Intro tag={tag} />
       <Posts posts={edges} />
-    </Layout>
+    </>
   )
 }
 

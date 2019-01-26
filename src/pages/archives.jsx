@@ -1,7 +1,6 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import styles from 'styles/posts.module.css'
-import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
 import SEO from '../components/Seo'
 
@@ -33,21 +32,19 @@ const Archives = ({
     allMarkdownRemark: { group },
   },
 }) => (
-  <Layout>
-    <div className={styles.article}>
-      <SEO title="归档" />
-      <Title>归档</Title>
-      {group.reverse().map(({ fieldValue, totalCount, edges }, i) => (
-        <React.Fragment key={i}>
-          <h3>
-            {fieldValue}
-            {` (${totalCount})`}
-          </h3>
-          <ArchivesLinks posts={edges} />
-        </React.Fragment>
-      ))}
-    </div>
-  </Layout>
+  <div className={styles.article}>
+    <SEO title="归档" />
+    <Title>归档</Title>
+    {group.reverse().map(({ fieldValue, totalCount, edges }, i) => (
+      <React.Fragment key={i}>
+        <h3>
+          {fieldValue}
+          {` (${totalCount})`}
+        </h3>
+        <ArchivesLinks posts={edges} />
+      </React.Fragment>
+    ))}
+  </div>
 )
 
 export default Archives

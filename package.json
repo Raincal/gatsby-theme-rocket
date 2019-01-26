@@ -1,7 +1,7 @@
 {
   "name": "gatsby-firekylin",
   "description": "Gatsby Firekylin",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
@@ -14,6 +14,7 @@
     "gatsby-plugin-brotli": "^1.0.0",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-feed": "^2.0.11",
+    "gatsby-plugin-layout": "^1.0.11",
     "gatsby-plugin-manifest": "^2.0.13",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-no-sourcemaps": "^2.0.1",

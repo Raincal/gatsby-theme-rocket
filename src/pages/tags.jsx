@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import styles from 'styles/posts.module.css'
-import Layout from '../components/Layout'
 import Title from '../components/Posts/Title'
 import SEO from '../components/Seo'
 import Tag from '../components/Tag'
@@ -19,13 +18,11 @@ const TagsPage = ({
     allMarkdownRemark: { group },
   },
 }) => (
-  <Layout>
-    <div className={styles.article}>
-      <SEO title="标签" />
-      <Title>标签</Title>
-      <Tags tags={group} />
-    </div>
-  </Layout>
+  <div className={styles.article}>
+    <SEO title="标签" />
+    <Title>标签</Title>
+    <Tags tags={group} />
+  </div>
 )
 
 export default TagsPage
