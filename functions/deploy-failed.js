@@ -1,14 +1,29 @@
 const axios = require('axios')
 
+axios.defaults.headers.common['Authorization'] =
+  `token ${process.env.DAO_TOKEN}`
+
 export async function handler() {
-  const url = `https://openapi.daocloud.io/v1/build-flows/${process.env.BUILD_ID}/builds`
-  return axios.post(url, {
-    headers: {
-      'Authorization': `token ${process.env.DAO_TOKEN}`,
-      'Content-Type': 'application/json'
-    },
-    data: {
-      branch:'master'
+  try {
+    const res = await axios.get(
+      `https://openapi.daocloud.io/v1/build-flows/${process.env.BUILD_ID}`
+    )
+
+    if (res.data.status !== 'Started') {
+      return axios.post(
+        `https://openapi.daocloud.io/v1/build-flows/${
+          process.env.BUILD_ID
+        }/builds`,
+        {
+          data: {
+            branch: 'master',
+          },
+        }
+      )
     }
-  })
+  } catch (error) {
+    // eslint-disable-next-line
+    console.log(error.response.data)
+    return
+  }
 }
