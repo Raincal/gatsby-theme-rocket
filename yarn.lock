@@ -3566,7 +3566,7 @@ debug@^3.1.0, debug@^3.2.5:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@~4.1.0:
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@~4.1.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
   integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
@@ -5451,15 +5451,15 @@ gatsby-source-filesystem@^2.0.17:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-yuque@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-source-yuque/-/gatsby-source-yuque-0.0.5.tgz#f9f0df4c52c5ac0b96aede275d55e00241dcb64f"
-  integrity sha512-5S4HodwWlKX3EzwzjtjhIWVtlCNUb0RCxiWNx5fzj8FEiKFgyhgeACTSXc5bKSPmACfOLlG1bqPuBd24FgmRYA==
+gatsby-source-yuque@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-source-yuque/-/gatsby-source-yuque-0.0.6.tgz#b11e14e28ca883a553277ec0a5c50acb8c40e05b"
+  integrity sha512-8AYy0JptiO1PXsf/8D4cZVgKeIKOFZvcfSnXdLHbUy2BVitX3FMS3yjuBKxA3baAz8OswYDilhF8VUZbSKr+gg==
   dependencies:
     "@babel/runtime" "^7.2.0"
     axios "^0.18.0"
     dayjs "^1.8.0"
-    gatsby-cli "^2.4.8"
+    debug "^4.1.1"
     gray-matter "^4.0.2"
     html-entities "^1.2.1"
     queue "^5.0.0"
