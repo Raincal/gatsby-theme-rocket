@@ -1,5 +1,7 @@
 # Gatsby Rocket Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22c7923b-babe-4e50-9569-a208a878383b/deploy-status)](https://app.netlify.com/sites/firekylin/deploys)
+
 A super fast blog built with Gatsby.
 
 ## Development
