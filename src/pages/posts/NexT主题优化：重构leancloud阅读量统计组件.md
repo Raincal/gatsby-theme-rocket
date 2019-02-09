@@ -1,7 +1,7 @@
 ---
-title: "NexT 主题优化：重构 leancloud 阅读量统计模块"
-slug: "hexo-next-optimize-leancloud"
-date: "2018-02-11"
+title: 'NexT 主题优化：重构 leancloud 阅读量统计模块'
+slug: 'hexo-next-optimize-leancloud'
+date: 2018-02-11
 tags: [Next, Leancloud]
 ---
 
@@ -15,9 +15,9 @@ tags: [Next, Leancloud]
 
 如果使用的是原生 SDK，请尽快升级到以下版本：
 
--   Android 3.16.4 及更高版本
--   iOS 5.0.0 及更高版本
--   JavaScript 3.0.0 及更高版本
+- Android 3.16.4 及更高版本
+- iOS 5.0.0 及更高版本
+- JavaScript 3.0.0 及更高版本
 
 如果使用 REST API 来访问 api.leancloud.cn，请通过以下地址来动态获取应用专属的二级域名：
 

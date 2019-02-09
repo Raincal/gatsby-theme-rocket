@@ -1,7 +1,7 @@
 ---
 title: "使用 Docker 部署 FlarumChina"
 slug: "deploy-flarumChina-with-docker"
-date: "2017-08-07"
+date: 2017-08-07
 tags: ["Docker", "Linux"]
 ---
 

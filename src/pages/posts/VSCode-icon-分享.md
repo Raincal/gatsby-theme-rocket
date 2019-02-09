@@ -1,7 +1,7 @@
 ---
-title: "VSCode icon 分享"
-slug: "vscode-icon-share"
-date: "2017-10-12"
+title: 'VSCode icon 分享'
+slug: 'vscode-icon-share'
+date: 2017-10-12
 tags: [VSCode, Icon, Editor]
 ---
 

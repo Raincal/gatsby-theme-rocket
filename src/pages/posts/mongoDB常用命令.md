@@ -1,14 +1,14 @@
 ---
-title: "mongoDB 常用命令"
-slug: "mongodb-command"
-date: "2015-07-10"
-tags: ["mongoDB"]
-categories: ["mongoDB"]
+title: 'mongoDB 常用命令'
+slug: 'mongodb-command'
+date: 2015-07-10
+tags: ['mongoDB']
+categories: ['mongoDB']
 ---
 
 ## 安装
 
-[mongoDB官网][mongodb]下载安装（[Windows安装方法][install-on-windows]）
+[mongoDB 官网][mongodb]下载安装（[Windows 安装方法][install-on-windows]）
 
 ## 基础知识
 
@@ -18,7 +18,7 @@ categories: ["mongoDB"]
 
 ## 启动数据库服务
 
-定位到安装目录下的bin文件夹里后
+定位到安装目录下的 bin 文件夹里后
 
     > mongod --dbpath ../data/db
 
@@ -28,7 +28,7 @@ categories: ["mongoDB"]
 
 ## 开启一个客户端访问数据库
 
-同样的bin文件夹下执行
+同样的 bin 文件夹下执行
 
     > mongo
 
@@ -66,11 +66,11 @@ categories: ["mongoDB"]
 
     > db.createCollection("users")
 
-## 插入操作insert
+## 插入操作 insert
 
     > db.users.insert({"name":"kiinlam","age":28})
 
-## 查询操作find
+## 查询操作 find
 
 ### 查找所有文档
 
@@ -84,35 +84,35 @@ categories: ["mongoDB"]
 
     > db.users.findOne({"name":"kiinlam"})
 
-### 大于$gt
+### 大于\$gt
 
     > db.users.find({"age":{$gt:22}})
 
-### 大于等于$gte
+### 大于等于\$gte
 
     > db.users.find({"age":{$gte:22}})
 
-### 小于$lt
+### 小于\$lt
 
     > db.users.find({"age":{$lt:22}})
 
-### 小于等于$gte
+### 小于等于\$gte
 
     > db.users.find({"age":{$lte:22}})
 
-### 不等于$ne
+### 不等于\$ne
 
     > db.users.find("age":{$ne:22})
 
-### 或$or
+### 或\$or
 
     > db.users.find({$or:[{"name":"kiinlam"},{"name":"cheungkiinlam"}]})
 
-### 在集合中$in
+### 在集合中\$in
 
     > db.users.find("name":{$in:["kiinlam","cheungkiinlam"]})
 
-### 不在集合中$nin
+### 不在集合中\$nin
 
     > db.users.find("name":{$nin:["kiinlam","cheungkiinlam"]})
 
@@ -120,27 +120,27 @@ categories: ["mongoDB"]
 
     > db.users.find({"name":/^k/,"name":/m$/})
 
-### 筛选查询$where
+### 筛选查询\$where
 
     // 使用js function作为筛选条件
     > db.users.find({$where: function(){return this.name=='kiinlam'}})
 
-### 限制查询数量limit
+### 限制查询数量 limit
 
     > db.users.find({"age":22}).limit(10)
 
-## 更新操作update
+## 更新操作 update
 
 ### 指定文档全部更新，等于覆盖
 
     > db.users.update({"name":"kiinlam"}, {"name":"cheungkiinlam","age":27})
 
-### 局部更新一：增量更新$inc
+### 局部更新一：增量更新\$inc
 
     // age增加2，其他不变
     > db.users.update({"name":"kiinlam"}, {$inc:{"age":2}})
 
-### 局部更新二：字段修改$set
+### 局部更新二：字段修改\$set
 
     // age改为20
     > db.users.update({"name":"kiinlam"}, {$set:{"age":20}})
@@ -155,14 +155,14 @@ categories: ["mongoDB"]
     // 如果匹配多条，默认只改第一条，将第四个参数设为true可全部更新
     > db.users.update({"name":"kiinlam"}, {$set:{"age":18}}, true, true)
 
-## 保存操作save
+## 保存操作 save
 
     // 插入新文档，如果不提供"_id"字段
     > db.users.save({"name":"kiinlam", "age":28})
     // 更新已存在的文档
     > db.users.save({"_id":"xxx","name":"kiinlam", "age":28})
 
-## 删除操作remove
+## 删除操作 remove
 
 删除操作不可恢复
 
@@ -190,24 +190,24 @@ categories: ["mongoDB"]
 
     > db.users.drop()
 
-## 计数操作count
+## 计数操作 count
 
     > db.users.count()
     > db.users.count({"age":29})
 
-## 唯一值查询distinct
+## 唯一值查询 distinct
 
 ### 指定字段有多个相同时，只取一个，返回指定字段的值组合成的数组
 
     > db.users.distinct("age")
 
-## 分组操作group
+## 分组操作 group
 
-按照`age`进行分组操作，分组结果存放在`user`中，值为对应`age`的name值的数组
+按照`age`进行分组操作，分组结果存放在`user`中，值为对应`age`的 name 值的数组
 
 `key`：分组依据
 
-`initial`：初始化函数，每个不同的age组共享同一个函数
+`initial`：初始化函数，每个不同的 age 组共享同一个函数
 
 `$reduce`： 第一个参数为当前文档，第二参数为前一次函数操作的累计对象，第一次为`initial`对应的对象
 
@@ -270,7 +270,7 @@ categories: ["mongoDB"]
     `condition` —— 过滤条件
     `finalize` —— 函数，分组完成后执行
 
-过滤掉`age`大于22的文档，增加属性标明分组中文档的数量
+过滤掉`age`大于 22 的文档，增加属性标明分组中文档的数量
 
     > db.users.group({
                         "key": {"age": true},
@@ -391,7 +391,7 @@ categories: ["mongoDB"]
 
 ## 游标
 
-游标只表示一个引用，并不是真正的执行，在需要的时候，通过for循环或`next()`方法进行遍历读取，枚举结束后，游标销毁，不再返回数据。
+游标只表示一个引用，并不是真正的执行，在需要的时候，通过 for 循环或`next()`方法进行遍历读取，枚举结束后，游标销毁，不再返回数据。
 
 申明一个游标
 
@@ -429,7 +429,7 @@ categories: ["mongoDB"]
     > list
     >
 
-## 索引ensureIndex
+## 索引 ensureIndex
 
 ### 建立索引
 
@@ -459,17 +459,17 @@ categories: ["mongoDB"]
     // 删除指定索引
     > db.users.dropIndex("name_1")
 
-## 性能分析函数explain
+## 性能分析函数 explain
 
     > db.users.find().explain("executionStats")
 
 ## 主从数据库部署
 
-### 创建主数据库master
+### 创建主数据库 master
 
     > mongod --dbpath=XXX --master
 
-### 创建从数据库slave
+### 创建从数据库 slave
 
     // 指定从数据库端口--port
     // 指定主数据库源--source
@@ -484,7 +484,7 @@ categories: ["mongoDB"]
     // 在sources中加入源地址
     > db.sources.insert({"host":"127.0.0.1:27017"})
 
-## 副本集replSet
+## 副本集 replSet
 
 该架构没有特定的主数据库，一个数据库宕机了，另一个数据库会顶上
 
@@ -534,21 +534,21 @@ categories: ["mongoDB"]
 
 主要参与者：
 
--   客户端
--   路由服务器mongos
--   配置服务器
--   分片数据库实例
+- 客户端
+- 路由服务器 mongos
+- 配置服务器
+- 分片数据库实例
 
-### 开启配置服务器config
+### 开启配置服务器 config
 
     > mongod --dbpath=XXX --port 2222
 
-### 开启路由服务器mongos
+### 开启路由服务器 mongos
 
     // 指定配置服务器
     > mongos --port 3333 --configdb=127.0.0.1:2222
 
-### 开启分片数据库服务器mongod
+### 开启分片数据库服务器 mongod
 
     > mongod --dbpath=XXX --port 4444
     > mongod --dbpath=XXX --port 5555
@@ -576,14 +576,14 @@ categories: ["mongoDB"]
 
 ## 运维
 
-运维通常会涉及到以下4个方面
+运维通常会涉及到以下 4 个方面
 
--   安装部署
--   状态监控
--   安全认证
--   备份和恢复
+- 安装部署
+- 状态监控
+- 安全认证
+- 备份和恢复
 
-### 安装部署为windows服务
+### 安装部署为 windows 服务
 
     // 指定日志路径，添加install参数
     > mongod --dbpath=XXX --logpath=XXX --port=2222 --install
@@ -628,23 +628,18 @@ _TODO_
     // 恢复数据，drop表示恢复前删除原有数据
     > mongorestore --port 2222 -d test --drop D:\mongodb\backup
 
-* * *
+---
 
 ## 参考资料
 
--   [mongoDB][mongodb]
--   [MongoDB文档][mongodb-manual]
--   [install-mongodb-on-windows][install-on-windows]
--   [8天学通MongoDB系列](http://www.cnblogs.com/huangxincheng/category/355399.html)
+- [mongoDB][mongodb]
+- [MongoDB 文档][mongodb-manual]
+- [install-mongodb-on-windows][install-on-windows]
+- [8 天学通 MongoDB 系列](http://www.cnblogs.com/huangxincheng/category/355399.html)
 
 [mongodb]: https://www.mongodb.org/
-
 [install-on-windows]: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
-
 [mongodb-manual]: http://docs.mongodb.org/manual/
-
 [security]: http://docs.mongodb.org/manual/security/
-
 [stats]: http://www.cnblogs.com/xuegang/archive/2011/10/13/2209965.html
-
 [serverstatus]: http://www.cnblogs.com/xuegang/archive/2011/10/13/2210339.html

@@ -1,23 +1,23 @@
 ---
-title: "Mac OS 终端使用 subl 运行 Sublime Text 3"
-slug: "launch-sublime-text-from-command-line"
-date: "2015-05-09"
+title: 'Mac OS 终端使用 subl 运行 Sublime Text 3'
+slug: 'launch-sublime-text-from-command-line'
+date: 2015-05-09
 tags: [macOS, Sublime, Editor]
 ---
 
-1.添加link
+1.添加 link
 
 ```bash
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
-2.编辑PATH
+2.编辑 PATH
 
 ```bash
 vim ~/.bash_profile
 ```
 
-3.添加PATH
+3.添加 PATH
 
 ```bash
 export PATH=/usr/local/bin:$PATH

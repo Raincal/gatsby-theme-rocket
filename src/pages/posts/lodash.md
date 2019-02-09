@@ -1,12 +1,12 @@
 ---
-title: "10 个可用 ES6 替代的 Lodash 特性"
-slug: "lodash"
-date: "2016-06-30"
+title: '10 个可用 ES6 替代的 Lodash 特性'
+slug: 'lodash'
+date: 2016-06-30
 tags: [lodash]
 ---
 
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
-> 译者：[少年阿布DX](http://www.zcfy.cc/@shawndai06)
+> 译者：[少年阿布 DX](http://www.zcfy.cc/@shawndai06)
 > 链接：<http://www.zcfy.cc/article/467>
 > 原文：<https://www.sitepoint.com/lodash-features-replace-es6/>
 
@@ -21,18 +21,28 @@ _本文由 [Mark Brown](https://www.sitepoint.com/author/mbrown) 协助审查。
 这些集合方法使数据转化变得轻而易举。由于普遍地对此特性的支持，我们可以将它与箭头函数组合起来，以助我们使用比 Lodash 的实现更简便的方法来实现。
 
 ```javascript
-_.map([1, 2, 3], function(n) { return n * 3; });
+_.map([1, 2, 3], function(n) {
+  return n * 3
+})
 // [3, 6, 9]
-_.reduce([1, 2, 3], function(total, n) { return total + n; }, 0);
+_.reduce(
+  [1, 2, 3],
+  function(total, n) {
+    return total + n
+  },
+  0
+)
 // 6
-_.filter([1, 2, 3], function(n) { return n <= 2; });
+_.filter([1, 2, 3], function(n) {
+  return n <= 2
+})
 // [1, 2]
 
 // 变为
 
-[1, 2, 3].map(n => n * 3);
-[1, 2, 3].reduce((total, n) => total + n);
-[1, 2, 3].filter(n => n <= 2);
+;[1, 2, 3].map(n => n * 3)
+;[1, 2, 3].reduce((total, n) => total + n)
+;[1, 2, 3].filter(n => n <= 2)
 ```
 
 不止于此，如果我们使用 ES6 的 polyfill，我们也能使用 [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)、[every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every) 和 [reduceRight](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
@@ -44,34 +54,34 @@ _.filter([1, 2, 3], function(n) { return n <= 2; });
 [解构语法](https://www.sitepoint.com/preparing-ecmascript-6-destructuring-assignment/) 让我们可以获取一个列表的头（head）和尾（tail），而无需工具函数。
 
 ```javascript
-_.head([1, 2, 3]);
+_.head([1, 2, 3])
 // 1
-_.tail([1, 2, 3]);
+_.tail([1, 2, 3])
 // [2, 3]
 
 // 变为
 
-const [head, ...tail] = [1, 2, 3];
+const [head, ...tail] = [1, 2, 3]
 ```
 
 也可以用相似的方式获得列表最后一个元素（last）以及除其之外的元素（initial）
 
 ```javascript
-_.initial([1, 2, 3]);
+_.initial([1, 2, 3])
 // -> [1, 2]
-_.last([1, 2, 3]);
+_.last([1, 2, 3])
 // 3
 
 // 变为
 
-const [last, ...initial] = [1, 2, 3].reverse();
+const [last, ...initial] = [1, 2, 3].reverse()
 ```
 
 如果你讨厌 [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 会改变数据结构，那你可以在调用 reverse 之前使用延展操作符（spread operator）来复制一个数组。
 
 ```javascript
-const xs = [1, 2, 3];
-const [last, ...initial] = [...xs].reverse(); 
+const xs = [1, 2, 3]
+const [last, ...initial] = [...xs].reverse()
 ```
 
 ## 3. Rest & Spread
@@ -80,25 +90,24 @@ const [last, ...initial] = [...xs].reverse();
 
 ```javascript
 var say = _.rest(function(what, names) {
-  var last = _.last(names);
-  var initial = _.initial(names);
-  var finalSeparator = (_.size(names) > 1 ? ', & ' : '');
-  return what + ' ' + initial.join(', ') +
-    finalSeparator + _.last(names);
-});
+  var last = _.last(names)
+  var initial = _.initial(names)
+  var finalSeparator = _.size(names) > 1 ? ', & ' : ''
+  return what + ' ' + initial.join(', ') + finalSeparator + _.last(names)
+})
 
-say('hello', 'fred', 'barney', 'pebbles');
+say('hello', 'fred', 'barney', 'pebbles')
 // "hello fred, barney, & pebbles"
 
 // 变为
 
 const say = (what, ...names) => {
-  const [last, ...initial] = names.reverse();
-  const finalSeparator = (names.length > 1 ? ', &' : '');
-  return `${what} ${initial.join(', ')} ${finalSeparator} ${last}`;
-};
+  const [last, ...initial] = names.reverse()
+  const finalSeparator = names.length > 1 ? ', &' : ''
+  return `${what} ${initial.join(', ')} ${finalSeparator} ${last}`
+}
 
-say('hello', 'fred', 'barney', 'pebbles');
+say('hello', 'fred', 'barney', 'pebbles')
 // "hello fred, barney, & pebbles"
 ```
 
@@ -108,18 +117,18 @@ say('hello', 'fred', 'barney', 'pebbles');
 
 ```javascript
 function add(a, b) {
-  return a + b;
+  return a + b
 }
-var curriedAdd = _.curry(add);
-var add2 = curriedAdd(2);
-add2(1);
+var curriedAdd = _.curry(add)
+var add2 = curriedAdd(2)
+add2(1)
 // 3
 
 // 变为
 
-const add = a => b => a + b;
-const add2 = add(2);
-add2(1);
+const add = a => b => a + b
+const add2 = add(2)
+add2(1)
 // 3
 ```
 
@@ -127,12 +136,12 @@ add2(1);
 
 ```javascript
 var lodashAdd = _.curry(function(a, b) {
-  return a + b;
-});
-var add3 = lodashAdd(3);
+  return a + b
+})
+var add3 = lodashAdd(3)
 console.log(add3.length)
 // 0
-console.log(add3);
+console.log(add3)
 //function wrapper() {
 //  var length = arguments.length,
 //  args = Array(length),
@@ -144,22 +153,22 @@ console.log(add3);
 
 // 变为
 
-const es6Add = a => b => a + b;
-const add3 = es6Add(3);
-console.log(add3.length);
+const es6Add = a => b => a + b
+const add3 = es6Add(3)
+console.log(add3.length)
 // 1
-console.log(add3);
-// function b => a + b 
+console.log(add3)
+// function b => a + b
 ```
 
 如果我们使用函数式的库如 [lodash/fp](https://github.com/lodash/lodash/wiki/FP-Guide) 和 [ramda](http://ramdajs.com)，那我们也能使用箭头函数来免除对自动柯里化风格的需要。
 
 ```javascript
-_.map(_.prop('name'))(people);
+_.map(_.prop('name'))(people)
 
 // 变为
 
-people.map(person => person.name); 
+people.map(person => person.name)
 ```
 
 ## 5. Partial
@@ -168,26 +177,26 @@ people.map(person => person.name);
 
 ```javascript
 var greet = function(greeting, name) {
-  return greeting + ' ' + name;
-};
+  return greeting + ' ' + name
+}
 
-var sayHelloTo = _.partial(greet, 'hello');
-sayHelloTo('fred');
+var sayHelloTo = _.partial(greet, 'hello')
+sayHelloTo('fred')
 // "hello fred"
 
 // 变为
 
-const sayHelloTo = name => greet('hello', name);
-sayHelloTo('fred');
+const sayHelloTo = name => greet('hello', name)
+sayHelloTo('fred')
 // "hello fred"
 ```
 
 我们也能结合剩余参数与延展操作符来部分地应用可变参数函数、
 
 ```javascript
-const sayHelloTo = (name, ...args) => greet('hello', name, ...args);
-sayHelloTo('fred', 1, 2, 3);
-// "hello fred" 
+const sayHelloTo = (name, ...args) => greet('hello', name, ...args)
+sayHelloTo('fred', 1, 2, 3)
+// "hello fred"
 ```
 
 ## 6. Operators
@@ -197,23 +206,22 @@ Lodash 把很多句法操作符重新实现成了函数，所以它们可以被�
 在大多数情况下，箭头函数能让它们定义地足够简单精炼，一行足矣。
 
 ```javascript
-_.eq(3, 3);
+_.eq(3, 3)
 // true
-_.add(10, 1);
+_.add(10, 1)
 // 11
 _.map([1, 2, 3], function(n) {
-  return _.multiply(n, 10);
-});
+  return _.multiply(n, 10)
+})
 // [10, 20, 30]
-_.reduce([1, 2, 3], _.add);
+_.reduce([1, 2, 3], _.add)
 // 6
 
 // 变为
 
 3 === 3
-10 + 1
-[1, 2, 3].map(n => n * 10);
-[1, 2, 3].reduce((total, n) => total + n); 
+10 + (1)[(1, 2, 3)].map(n => n * 10)
+;[1, 2, 3].reduce((total, n) => total + n)
 ```
 
 ## 7. Paths
@@ -221,41 +229,35 @@ _.reduce([1, 2, 3], _.add);
 许多 Lodash 的函数把路径当做字符串或者数组。然而我们可以使用箭头函数来创建更多可重用的路径。
 
 ```javascript
-var object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
+var object = { a: [{ b: { c: 3 } }, 4] }
 
-_.at(object, ['a[0].b.c', 'a[1]']);
+_.at(object, ['a[0].b.c', 'a[1]'])
 // [3, 4]
-_.at(['a', 'b', 'c'], 0, 2);
+_.at(['a', 'b', 'c'], 0, 2)
 // ['a', 'c']
 
 // 变为
 
-[
-  obj => obj.a[0].b.c,
-  obj => obj.a[1]
-].map(path => path(object));
+;[obj => obj.a[0].b.c, obj => obj.a[1]].map(path => path(object))
 
-[
-  arr => arr[0],
-  arr => arr[2]
-].map(path => path(['a', 'b', 'c']));
+;[arr => arr[0], arr => arr[2]].map(path => path(['a', 'b', 'c']))
 ```
 
 因为这些路径“只是函数”，所以我们也能复合它们。
 
 ```javascript
-const getFirstPerson = people => people[0];
-const getPostCode = person => person.address.postcode;
-const getFirstPostCode = people => getPostCode(getFirstPerson(people));
+const getFirstPerson = people => people[0]
+const getPostCode = person => person.address.postcode
+const getFirstPostCode = people => getPostCode(getFirstPerson(people))
 ```
 
 我们甚至能创建更高阶能接收参数的路径。
 
 ```javascript
-const getFirstNPeople = n => people => people.slice(0, n);
+const getFirstNPeople = n => people => people.slice(0, n)
 
-const getFirst5People = getFirstNPeople(5);
-const getFirst5PostCodes = people => getFirst5People(people).map(getPostCode); 
+const getFirst5People = getFirstNPeople(5)
+const getFirst5PostCodes = people => getFirst5People(people).map(getPostCode)
 ```
 
 ## 8. Pick
@@ -263,16 +265,16 @@ const getFirst5PostCodes = people => getFirst5People(people).map(getPostCode);
 [pick](https://lodash.com/docs#pick) 工具能让我们从一个对象中选择我们想要的属性。我们也能通过解构与对象字面量简写来获取同样的结果。
 
 ```javascript
-var object = { 'a': 1, 'b': '2', 'c': 3 };
+var object = { a: 1, b: '2', c: 3 }
 
-return _.pick(object, ['a', 'c']);
+return _.pick(object, ['a', 'c'])
 // { a: 1, c: 3 }
 
 // 变为
 
-const { a, c } = { a: 1, b: 2, c: 3 };
+const { a, c } = { a: 1, b: 2, c: 3 }
 
-return { a, c }; 
+return { a, c }
 ```
 
 ## 9. Constant, Identity, Noop
@@ -280,30 +282,30 @@ return { a, c };
 Lodash 提供了一些工具函数来创建简单的具某一特定行为的函数。
 
 ```javascript
-_.constant({ 'a': 1 })();
+_.constant({ a: 1 })()
 // { a: 1 }
-_.identity({ user: 'fred' });
+_.identity({ user: 'fred' })
 // { user: 'fred' }
-_.noop();
+_.noop()
 // undefined
 ```
 
 我们也能使用箭头函数行内定义这些函数。
 
 ```javascript
-const constant = x => () => x;
-const identity = x => x;
-const noop = () => undefined;
+const constant = x => () => x
+const identity = x => x
+const noop = () => undefined
 ```
 
 或者我们也能把上面的例子重写为：
 
 ```javascript
-(() => ({ a: 1 }))();
+;(() => ({ a: 1 }))()
 // { a: 1 }
-(x => x)({ user: 'fred' });
+;(x => x)({ user: 'fred' })
 // { user: 'fred' }
-(() => undefined)();
+;(() => undefined)()
 // undefined
 ```
 
@@ -315,44 +317,39 @@ Lodash 提供了一些函数来帮我们编写链式的语句。在大多情况�
 
 ```javascript
 _([1, 2, 3])
- .tap(function(array) {
-   // 修改输入函数
-   array.pop();
- })
- .reverse()
- .value();
+  .tap(function(array) {
+    // 修改输入函数
+    array.pop()
+  })
+  .reverse()
+  .value()
 // [2, 1]
 
 // 变为
 
 const pipeline = [
-  array => { array.pop(); return array; },
-  array => array.reverse()
-];
+  array => {
+    array.pop()
+    return array
+  },
+  array => array.reverse(),
+]
 
-pipeline.reduce((xs, f) => f(xs), [1, 2, 3]);
+pipeline.reduce((xs, f) => f(xs), [1, 2, 3])
 ```
 
 这样的话，我们甚至不需要去思考 [tap](https://lodash.com/docs#tap) 和 [thru](https://lodash.com/docs#thru) 的不同。把这个归约包装成工具函数能创造出一个非常有用的多功能工具。
 
 ```javascript
 const pipe = functions => data => {
-  return functions.reduce(
-    (value, func) => func(value),
-    data
-  );
-};
+  return functions.reduce((value, func) => func(value), data)
+}
 
-const pipeline = pipe([
-  x => x * 2,
-  x => x / 3,
-  x => x > 5,
-  b => !b
-]);
+const pipeline = pipe([x => x * 2, x => x / 3, x => x > 5, b => !b])
 
-pipeline(5);
+pipeline(5)
 // true
-pipeline(20);
+pipeline(20)
 // false
 ```
 

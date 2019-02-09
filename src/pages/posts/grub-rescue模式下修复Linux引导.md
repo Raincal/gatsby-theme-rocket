@@ -1,9 +1,9 @@
 ---
-title: "grub rescue 模式下修复 Linux 引导"
-slug: "grub-rescue"
-date: "2017-11-22"
-tags: ["Linux", "grub", "Arch"]
-categories: ["Linux"]
+title: 'grub rescue 模式下修复 Linux 引导'
+slug: 'grub-rescue'
+date: 2017-11-22
+tags: ['Linux', 'grub', 'Arch']
+categories: ['Linux']
 ---
 
 前些天把很久没用的 Windows10 更新了下，更新后就进不了 Linux 系统了，提示 "file '/boot/grub/x86_64-efi/normal.mod' not found"，之后就进入 grub rescue 模式了
