@@ -4,7 +4,7 @@
   "version": "2.0.18",
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^0.17.0",
+    "@mdx-js/mdx": "^0.18.0",
     "@mdx-js/tag": "^0.17.0",
     "dayjs": "^1.8.5",
     "gatsby": "^2.0.118",
