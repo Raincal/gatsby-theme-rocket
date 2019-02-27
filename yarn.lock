@@ -5165,12 +5165,15 @@ gatsby-remark-prismjs@^3.2.4:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-yuque-images@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-yuque-images/-/gatsby-remark-yuque-images-0.0.4.tgz#91f34f7604b5d452de0a5a5c5ffcb1bf06aa7236"
-  integrity sha512-6rb44Z267RYvNTbtw/S8836Hpu1Y0xf6+gdSQcGGSm4W7kGFp7oRjJF1x87gNtzv/uvd10k33Pyara4c1s/1gw==
+gatsby-remark-yuque-images@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-yuque-images/-/gatsby-remark-yuque-images-0.1.0.tgz#9f0aa46978951271044065d589f55ceccb5ab332"
+  integrity sha512-GDlYI7slu541sHYNh4d9/1yFJsMDIMRcZVL5Udk2ZO2JynNzwW0k8Co6ZICtecF3gN4+YJkavJAir09jDEC26w==
   dependencies:
     "@babel/runtime" "^7.2.0"
+    axios "^0.18.0"
+    sharp "^0.21.3"
+    unist-util-select "^2.0.0"
     unist-util-visit-parents "^2.0.1"
 
 gatsby-source-filesystem@^2.0.23:
@@ -8235,6 +8238,11 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+
+not@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/not/-/not-0.1.0.tgz#c9691c1746c55dcfbe54cbd8bd4ff041bc2b519d"
+  integrity sha1-yWkcF0bFXc++VMvYvU/wQbwrUZ0=
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -12500,6 +12508,18 @@ unist-util-select@^1.5.0:
     debug "^2.2.0"
     nth-check "^1.0.1"
 
+unist-util-select@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-2.0.0.tgz#226b1a673eaf255302133ff94e450148a021c2c6"
+  integrity sha512-fRQqhrpgRIwdaeeZwbgDO84VyiyQP6cOcbzCao4saXuMuP3fLiWkssEI+o71OC2mASWqa9JEEYiGOV8EqpStPw==
+  dependencies:
+    css-selector-parser "^1.1.0"
+    debug "^3.1.0"
+    not "^0.1.0"
+    nth-check "^1.0.1"
+    unist-util-is "^2.1.2"
+    zwitch "^1.0.3"
+
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1, unist-util-stringify-position@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
@@ -13506,7 +13526,7 @@ zen-observable@^0.8.0:
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.13.tgz#a9f1b9dbdfd2d60a08761ceac6a861427d44ae2e"
   integrity sha512-fa+6aDUVvavYsefZw0zaZ/v3ckEtMgCFi30sn91SEZea4y/6jQp05E3omjkX91zV6RVdn15fqnFZ6RKjRGbp2g==
 
-zwitch@^1.0.0:
+zwitch@^1.0.0, zwitch@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.3.tgz#159fae4b3f737db1e42bf321d3423e4c96688a18"
   integrity sha512-aynRpmJDw7JIq6X4NDWJoiK1yVSiG57ArWSg4HLC1SFupX5/bo0Cf4jpX0ifwuzBfxpYBuNSyvMlWNNRuy3cVA==
