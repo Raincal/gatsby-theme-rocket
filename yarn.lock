@@ -779,10 +779,10 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@mdx-js/mdx@^0.18.1":
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.18.1.tgz#bbb2dc96d65e22c73b5f66a9428eb4561fdc33b7"
-  integrity sha512-NYD0CwCx5m48PPN2sUjvltQpVmmn71MpGvisYU+rAxxk0Ev2YgedMLomjmSiNZNywA52J8495M3q9tozObwzUA==
+"@mdx-js/mdx@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.19.0.tgz#54c161d6e2f8f904a12a8fca36660925e1cbc1fd"
+  integrity sha512-RkiTJqAjVdIVxRNH0YATyHUj0P0HD/JgDF7OKCHrt1LcyAScdMSHDk5QAHLGPmfW1f0j+dyAQhkM5wkw8Dr3Nw==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
     "@babel/plugin-syntax-jsx" "^7.2.0"
