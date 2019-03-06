@@ -5,7 +5,7 @@
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^0.20.1",
-    "@mdx-js/tag": "^0.18.0",
+    "@mdx-js/tag": "^0.20.0",
     "dayjs": "^1.8.8",
     "gatsby": "^2.1.20",
     "gatsby-mdx": "^0.4.0",
