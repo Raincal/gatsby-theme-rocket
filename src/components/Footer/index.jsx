@@ -21,8 +21,8 @@ const Footer = () => (
       Gatsby
     </a>
     &nbsp;&&nbsp;
-    <a href="https://graphql.org" target="_blank" rel="noopener noreferrer">
-      GraphQL
+    <a href="https://www.yuque.com" target="_blank" rel="noopener noreferrer">
+      Yuque
     </a>
   </footer>
 )

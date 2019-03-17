@@ -43,6 +43,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1060,
+              withWebp: true,
             },
           },
         ],
@@ -51,8 +52,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/components/Layout/index.jsx')
-      }
+        component: require.resolve('./src/components/Layout/index.jsx'),
+      },
     },
     {
       resolve: 'gatsby-plugin-feed',
