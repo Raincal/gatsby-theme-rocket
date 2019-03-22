@@ -1,7 +1,21 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+exports.onRouteUpdate = () => {
+  var divWrapper = (function() {
+    var div = document.createElement('div')
 
-// You can delete this file if you're not using it
+    return function(el, cls) {
+      var oDiv = div.cloneNode(false)
+      oDiv.className = cls
+      el.parentNode.insertBefore(oDiv, el)
+      oDiv.appendChild(el)
+    }
+  }())
+  
+  function wrapTable(className) {
+    var els = document.querySelectorAll('table')
+    for (let i = 0; i < els.length; i++) {
+      divWrapper(els[i], className)
+    }
+  }
+  
+  wrapTable('table-wrapper')
+}

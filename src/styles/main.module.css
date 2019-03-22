@@ -3,12 +3,12 @@
 .main {
   max-width: 1390px;
   padding: 0 40px 0 290px;
-  @media(--medium) {
+  @media (--medium) {
     width: 100%;
     padding-left: 115px;
   }
-  @media(--small) {
+  @media (--small) {
     padding: 6px 20px 0;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
