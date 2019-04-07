@@ -8,7 +8,7 @@
     "@mdx-js/tag": "^0.20.3",
     "dayjs": "^1.8.12",
     "gatsby": "^2.3.13",
-    "gatsby-mdx": "^0.4.4",
+    "gatsby-mdx": "^0.4.5",
     "gatsby-paginate": "^1.0.17",
     "gatsby-plugin-brotli": "^1.0.1",
     "gatsby-plugin-catch-links": "^2.0.13",
