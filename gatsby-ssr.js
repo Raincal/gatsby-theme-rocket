@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+exports.onPreRenderHTML = ({ pathname, getHeadComponents, replaceHeadComponents, replacePostBodyComponents }) => {
+  const regex = new RegExp(/\.(js|json)$/)
+  let headComponents = getHeadComponents()
 
-// You can delete this file if you're not using it
+  if (pathname === '/') {
+    headComponents = headComponents.filter(comp => !regex.test(comp.key))
+
+    replaceHeadComponents(headComponents)
+    replacePostBodyComponents([])
+  }
+}
