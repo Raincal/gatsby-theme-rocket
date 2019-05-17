@@ -78,6 +78,7 @@ module.exports = {
         theme_color: '#3b5998',
         display: 'minimal-ui',
         icon: 'src/images/icon.png',
+        legacy: false,
       },
     },
     // {
