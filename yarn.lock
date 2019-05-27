@@ -5536,10 +5536,10 @@ gatsby-paginate@^1.0.17:
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-brotli@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-brotli/-/gatsby-plugin-brotli-1.1.0.tgz#b6017e588a30043b9549251e1cf35588bec59977"
-  integrity sha512-9qitqoQL62infOmQmTC8180EF2nB7zI6bHyBZDFhSSmZnatLJIa/clxzMWPQYzLsJ1R8e+RLIZGzuVs9NMPArQ==
+gatsby-plugin-brotli@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-brotli/-/gatsby-plugin-brotli-1.1.1.tgz#77a092b809e244d41c14145c4bdf7488439a56d9"
+  integrity sha512-vKWLAh4zwf+bw6AZUMN9EUI33Oh7nP5t+pdbfAa2MXWTt2QY9l6Shfo2Ezy4Oo+EpNPnrpfbTTd5luaMpqDIpA==
   dependencies:
     brotli "^1.3.2"
 
