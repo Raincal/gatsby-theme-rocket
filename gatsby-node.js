@@ -63,6 +63,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage: createPage,
       pageTemplate: 'src/templates/index.jsx',
       pageLength: 5,
+      pathPrefix: '/',
     })
 
     const posts = result.data.allMarkdownRemark.edges
