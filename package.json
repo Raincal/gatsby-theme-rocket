@@ -10,7 +10,7 @@
     "dayjs": "^1.8.14",
     "gatsby": "^2.8.2",
     "gatsby-mdx": "^0.6.3",
-    "gatsby-paginate": "^1.0.17",
+    "gatsby-paginate": "^1.0.18",
     "gatsby-plugin-brotli": "^1.1.1",
     "gatsby-plugin-catch-links": "^2.0.15",
     "gatsby-plugin-feed": "^2.2.2",
