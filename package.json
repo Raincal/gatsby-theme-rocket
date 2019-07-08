@@ -7,7 +7,7 @@
     "@mdx-js/mdx": "^1.0.21",
     "@mdx-js/react": "^1.0.21",
     "@mdx-js/tag": "^0.20.3",
-    "dayjs": "^1.8.14",
+    "dayjs": "^1.8.15",
     "gatsby": "^2.13.1",
     "gatsby-mdx": "^0.6.3",
     "gatsby-paginate": "^1.0.17",
