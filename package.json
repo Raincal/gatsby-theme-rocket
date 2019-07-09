@@ -4,8 +4,8 @@
   "version": "2.4.2",
   "author": "Raincal <cyj94228@gmail.com>",
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.21",
-    "@mdx-js/react": "^1.0.21",
+    "@mdx-js/mdx": "^1.0.23",
+    "@mdx-js/react": "^1.0.23",
     "@mdx-js/tag": "^0.20.3",
     "dayjs": "^1.8.15",
     "gatsby": "^2.13.9",
