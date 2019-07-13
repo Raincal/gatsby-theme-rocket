@@ -10,7 +10,7 @@ module.exports = {
     socialLinks: config.socialLinks,
   },
   plugins: [
-    'gatsby-mdx',
+    'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
