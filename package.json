@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-source-yuque": "^0.1.0",
     "gatsby-transformer-remark": "^2.6.6",
-    "lodash": "^4.17.14",
+    "lodash": "^4.17.15",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prismjs": "^1.16.0",
