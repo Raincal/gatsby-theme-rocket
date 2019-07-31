@@ -15,7 +15,7 @@
   "dependencies": {
     "gatsby": "^2.13.45",
     "gatsby-source-yuque": "^0.1.0",
-    "gatsby-theme-rocket": "^1.0.0",
+    "gatsby-theme-rocket": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

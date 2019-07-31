@@ -15,7 +15,7 @@ module.exports = ({ title, description, author, siteUrl, navButtons, socialLinks
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
+        path: path.resolve('content'),
         name: 'markdown-pages',
       },
     },
