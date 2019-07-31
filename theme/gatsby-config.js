@@ -20,14 +20,6 @@ module.exports = ({ title, description, author, siteUrl, navButtons, socialLinks
       },
     },
     {
-      resolve: 'gatsby-source-yuque',
-      options: {
-        login: 'raincal',
-        repo: 'blog',
-        mdNameFormat: 'slug',
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -69,46 +61,10 @@ module.exports = ({ title, description, author, siteUrl, navButtons, socialLinks
       },
     },
     {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'Raincal\'s Blog',
-        short_name: 'Raincal',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#3b5998',
-        display: 'minimal-ui',
-        icon: require.resolve('./src/images/icon.png'),
-        legacy: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-page-creator',
       options: {
         path: path.join(__dirname, 'src', 'pages'),
       },
     }
-    // {
-    //   resolve: 'gatsby-plugin-offline',
-    //   options: {
-    //     runtimeCaching: [
-    //       {
-    //         urlPattern: /.*\/$/,
-    //         handler: 'networkFirst',
-    //       },
-    //       {
-    //         urlPattern: /(\.js$|\.css$|static\/)/,
-    //         handler: 'cacheFirst',
-    //       },
-    //       {
-    //         urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-    //         handler: 'staleWhileRevalidate',
-    //       },
-    //       {
-    //         urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
-    //         handler: 'staleWhileRevalidate',
-    //       },
-    //     ],
-    //   },
-    // },
   ],
 })
