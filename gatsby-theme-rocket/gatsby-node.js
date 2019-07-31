@@ -28,8 +28,8 @@ exports.onCreateNode = ({ node, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve('src/templates/PostTemplate.jsx')
-  const tagTemplate = path.resolve('src/templates/TagTemplate.jsx')
+  const blogPostTemplate = require.resolve('./src/templates/PostTemplate.jsx')
+  const tagTemplate = require.resolve('./src/templates/TagTemplate.jsx')
 
   return graphql(`
     {
@@ -61,7 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
     createPaginatedPages({
       edges: result.data.allMarkdownRemark.edges,
       createPage: createPage,
-      pageTemplate: 'src/templates/index.jsx',
+      pageTemplate: require.resolve('./src/templates/index.jsx'),
       pageLength: 5,
     })
 
@@ -116,7 +116,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        styles: path.resolve(__dirname, 'src/styles'),
+        styles: path.join(__dirname, 'src', 'styles'),
       },
     },
   })

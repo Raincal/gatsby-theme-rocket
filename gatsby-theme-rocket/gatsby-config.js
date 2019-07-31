@@ -1,13 +1,13 @@
-const config = require('./src/config')
+const path = require('path')
 
-module.exports = {
+module.exports = ({ title, description, author, siteUrl, navButtons, socialLinks }) => ({
   siteMetadata: {
-    title: config.title,
-    description: config.description,
-    author: config.author,
-    siteUrl: config.siteUrl,
-    navButtons: config.navButtons,
-    socialLinks: config.socialLinks,
+    title,
+    description,
+    author,
+    siteUrl,
+    navButtons,
+    socialLinks,
   },
   plugins: [
     'gatsby-plugin-mdx',
@@ -77,10 +77,16 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#3b5998',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png',
+        icon: require.resolve('./src/images/icon.png'),
         legacy: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: path.join(__dirname, 'src', 'pages'),
+      },
+    }
     // {
     //   resolve: 'gatsby-plugin-offline',
     //   options: {
@@ -105,4 +111,4 @@ module.exports = {
     //   },
     // },
   ],
-}
+})
