@@ -1,0 +1,9 @@
+- name: GitHub
+  icon: github-v
+  url: https://github.com/Raincal
+- name: RSS
+  icon: rss-v
+  url: https://blog.raincal.com/rss.xml
+- name: Search
+  icon: search
+  url: https://www.google.com/search?q=site%3Ablog.raincal.com

@@ -1,13 +1,11 @@
 const path = require('path')
 
-module.exports = ({ title, description, author, siteUrl, navButtons, socialLinks }) => ({
+module.exports = ({ siteUrl = 'https://theme-rocket.netlify.com', title = 'Gatsby Theme Rocket', description = 'A super fast blog', author = 'Raincal' }) => ({
   siteMetadata: {
+    siteUrl,
     title,
     description,
-    author,
-    siteUrl,
-    navButtons,
-    socialLinks,
+    author
   },
   plugins: [
     'gatsby-plugin-mdx',

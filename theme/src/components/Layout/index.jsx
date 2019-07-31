@@ -28,16 +28,6 @@ const layoutQuery = graphql`
     site {
       siteMetadata {
         title
-        navButtons {
-          name
-          icon
-          url
-        }
-        socialLinks {
-          name
-          icon
-          url
-        }
       }
     }
   }
