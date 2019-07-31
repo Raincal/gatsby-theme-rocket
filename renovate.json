@@ -1,4 +1,13 @@
 {
-  "extends": ["config:base"],
-  "rangeStrategy": "bump"
+  "extends": [
+    "config:base",
+    ":disablePeerDependencies"
+  ],
+  "includePaths": [
+    "site",
+    "theme"
+  ],
+  "rangeStrategy": "bump",
+  "bumpVersion": null,
+  "semanticCommitScope": null
 }
