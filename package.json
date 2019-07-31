@@ -9,7 +9,7 @@
     "deploy": "yarn workspace site deploy"
   },
   "workspaces": [
-    "gatsby-theme-rocket",
+    "theme",
     "site"
   ]
 }
