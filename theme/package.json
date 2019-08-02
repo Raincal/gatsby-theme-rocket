@@ -24,7 +24,7 @@
     "@mdx-js/mdx": "^1.1.1",
     "@mdx-js/react": "^1.1.1",
     "dayjs": "^1.8.15",
-    "gatsby-paginate": "^1.0.17",
+    "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-brotli": "^1.2.3",
     "gatsby-plugin-catch-links": "^2.1.2",
     "gatsby-plugin-feed": "^2.3.6",
