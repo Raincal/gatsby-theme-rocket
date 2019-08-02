@@ -4,8 +4,8 @@
     ":disablePeerDependencies"
   ],
   "includePaths": [
-    "site",
-    "theme"
+    "site/**",
+    "theme/**"
   ],
   "rangeStrategy": "bump",
   "bumpVersion": null,
