@@ -15,7 +15,7 @@ jobs:
     - name: yarn install, build
       run: |
         yarn
-        yarn build
+        yarn build:cdn
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:

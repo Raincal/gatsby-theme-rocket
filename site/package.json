@@ -5,9 +5,9 @@
   "author": "Raincal <cyj94228@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby build",
+    "build:cdn": "gatsby build --prefix-paths",
     "build:prod": "yarn clean && yarn build",
-    "deploy": "yarn build && ./deploy.sh",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "rm -rf .cache public"

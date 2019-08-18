@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn workspace site build",
-    "deploy": "yarn workspace site deploy"
+    "build:cdn": "yarn workspace site build:cdn"
   },
   "workspaces": [
     "theme",

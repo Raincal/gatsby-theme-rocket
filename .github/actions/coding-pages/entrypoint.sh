@@ -4,7 +4,7 @@ set -e
 
 if [ -z "$CO_TOKEN" ]
 then
-  echo "You must provide the action with a GitHub Personal Access Token secret in order to deploy."
+  echo "You must provide the action with a Coding Personal Access Token secret in order to deploy."
   exit 1
 fi
 
