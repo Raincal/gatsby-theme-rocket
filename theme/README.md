@@ -1,6 +1,7 @@
 # Gatsby Theme Rocket
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/22c7923b-babe-4e50-9569-a208a878383b/deploy-status)](https://app.netlify.com/sites/theme-rocket/deploys)
+![](https://github.com/Raincal/gatsby-theme-rocket/workflows/Node%20CI/badge.svg)
 
 A super fast blog built with Gatsby.
 
