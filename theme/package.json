@@ -29,7 +29,7 @@
     "gatsby-plugin-catch-links": "^2.1.10",
     "gatsby-plugin-feed": "^2.3.13",
     "gatsby-plugin-layout": "^1.1.8",
-    "gatsby-plugin-mdx": "^1.0.43",
+    "gatsby-plugin-mdx": "^1.0.44",
     "gatsby-plugin-netlify": "^2.1.15",
     "gatsby-plugin-no-sourcemaps": "^2.1.1",
     "gatsby-plugin-page-creator": "^2.1.21",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.14.3",
-    "gatsby": "^2.15.21",
+    "gatsby": "^2.15.22",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
