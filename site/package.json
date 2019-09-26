@@ -13,7 +13,7 @@
     "clean": "rm -rf .cache public"
   },
   "dependencies": {
-    "gatsby": "^2.15.22",
+    "gatsby": "^2.15.28",
     "gatsby-source-yuque": "^0.2.1",
     "gatsby-theme-rocket": "*",
     "react": "^16.9.0",
