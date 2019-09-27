@@ -55,8 +55,8 @@
     "eslint-plugin-react": "^7.14.3",
     "gatsby": "^2.15.22",
     "prettier": "^1.18.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0",
     "remark-cli": "^7.0.0",
     "remark-preset-lint-recommended": "^3.0.3"
   },
