@@ -16,6 +16,7 @@ module.exports = {
         repo: 'blog',
         mdNameFormat: 'slug',
       },
-    }
+    },
+    'gatsby-plugin-preact'
   ]
 }
