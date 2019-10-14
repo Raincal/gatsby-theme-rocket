@@ -1,12 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styles from 'styles/profile.module.css'
+import avatar from '../../images/avatar.svg'
 
 const Profile = ({ title }) => (
   <div className={styles.profile}>
     <Link to="/">
       <img
-        src='https://ae01.alicdn.com/kf/HTB1Vu.RXBSD3KVjSZFq7634bpXaf.png'
+        src={avatar}
         alt="avatar"
         className={styles.avatar}
       />
