@@ -1,5 +1,5 @@
 module.exports = {
-  assetPrefix: 'https://blog-1256167913.file.myqcloud.com',
+  assetPrefix: 'https://cdn.jsdelivr.net/gh/Raincal/gatsby-theme-rocket@web',
   plugins: [
     {
       resolve: 'gatsby-theme-rocket',
