@@ -23,7 +23,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: 'web'
-          FOLDER: 'site/public'
+          FOLDER: 'public'
       - name: deploy to coding
         uses: ./.github/actions/coding-pages
         env:
@@ -32,4 +32,4 @@ jobs:
           COMMIT_EMAIL: ${{ secrets.CO_EMAIL }}
           CO_REF: ${{ secrets.CO_REF }}
           BRANCH: 'master'
-          FOLDER: 'site/public'
+          FOLDER: 'public'

@@ -10,7 +10,8 @@
     "build:prod": "yarn clean && yarn build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "rm -rf .cache public"
+    "postbuild": "mv public ../",
+    "clean": "rm -rf .cache ../public"
   },
   "dependencies": {
     "gatsby": "^2.16.5",

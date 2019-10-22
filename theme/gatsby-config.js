@@ -51,7 +51,7 @@ module.exports = ({ siteUrl = 'https://theme-rocket.netlify.com', title = 'Gatsb
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-postcss',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-brotli',
+    // 'gatsby-plugin-brotli',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
