@@ -16,7 +16,7 @@
   "dependencies": {
     "gatsby": "^2.17.4",
     "gatsby-plugin-preact": "^3.1.19",
-    "gatsby-source-yuque": "^0.2.1",
+    "gatsby-source-yuque": "^0.2.3",
     "gatsby-theme-rocket": "*",
     "preact": "^10.0.1",
     "react": "^16.11.0",
