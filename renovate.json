@@ -1,7 +1,6 @@
 {
   "extends": [
-    "config:base",
-    ":disablePeerDependencies"
+    "config:base"
   ],
   "includePaths": [
     "site/**",
