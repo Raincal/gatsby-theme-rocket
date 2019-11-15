@@ -55,15 +55,15 @@
     "eslint-plugin-react": "^7.16.0",
     "gatsby": "^2.17.12",
     "prettier": "^1.19.1",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "remark-cli": "^7.0.1",
     "remark-preset-lint-recommended": "^3.0.3"
   },
   "peerDependencies": {
     "gatsby": "^2.17.12",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "remarkConfig": {
     "plugins": [
