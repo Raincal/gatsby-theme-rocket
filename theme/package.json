@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "eslint": "^6.6.0",
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react": "^7.17.0",
     "gatsby": "^2.17.12",
     "prettier": "^1.19.1",
     "react": "^16.11.0",
