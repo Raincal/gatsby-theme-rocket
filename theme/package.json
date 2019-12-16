@@ -35,7 +35,7 @@
     "gatsby-plugin-page-creator": "^2.1.36",
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.18",
-    "gatsby-plugin-sharp": "^2.3.7",
+    "gatsby-plugin-sharp": "^2.3.8",
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-remark-autolink-headers": "^2.1.21",
     "gatsby-remark-images": "^3.1.38",
