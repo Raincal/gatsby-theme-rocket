@@ -27,6 +27,7 @@ module.exports = ({ siteUrl = 'https://theme-rocket.netlify.com', title = 'Gatsb
             resolve: 'gatsby-remark-yuque-images',
             options: {
               maxWidth: 1060,
+              local: true
             },
           },
           {

@@ -806,7 +806,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
   integrity sha512-r24eVUUr0QqNZa+qrImUk8fn5SPhHq+IfYvIoIMg0do3GdK9sMdiLKP3GYVVaxpPKORgm8KRKaNTEhAjgIpLMw==
@@ -5840,17 +5840,17 @@ gatsby-remark-prismjs@^3.3.28:
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-yuque-images@^1.0.0-beta.0:
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-yuque-images/-/gatsby-remark-yuque-images-1.0.0-beta.0.tgz#bfb9e7748ff749376d3dc26482939492fe612dd7"
-  integrity sha512-kVtTfQO+XY0PnNnoJnI2mgfEqJr1sTdFy6V0HHLbydNyexD4+3DoP8FEGXiWAJj0JXNnM1iqpXwj8Zc73XOZ3Q==
+gatsby-remark-yuque-images@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-yuque-images/-/gatsby-remark-yuque-images-1.1.0.tgz#16bbfe00dab424a279aa96119612ea64a75276ec"
+  integrity sha512-GmvVo2TO6O5vOzQCu1KvjHnTpuuR9mSwNkqISEnqu30qI6UABbbh6Z/GzpjkpaJJAvaOGaiDM6UyYftFb1OXnw==
   dependencies:
-    "@babel/runtime" "^7.5.5"
+    "@babel/runtime" "^7.7.6"
     axios "^0.19.0"
     fs-extra "^8.1.0"
     lodash "^4.17.15"
     potrace "^2.1.2"
-    unist-util-visit-parents "^2.1.2"
+    unist-util-visit-parents "^3.0.1"
 
 gatsby-source-filesystem@^2.1.43:
   version "2.1.43"
@@ -13936,7 +13936,7 @@ unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.1.2:
   dependencies:
     unist-util-is "^3.0.0"
 
-unist-util-visit-parents@^3.0.0:
+unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-3.0.1.tgz#666883dc8684c6eec04a7e9781cdcd8b4888319f"
   integrity sha512-umEOTkm6/y1gIqPrqet55mYqlvGXCia/v1FSc5AveLAI7jFmOAIbqiwcHcviLcusAkEQt1bq2hixCKO9ltMb2Q==
