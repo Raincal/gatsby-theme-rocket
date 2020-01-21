@@ -48,6 +48,7 @@ module.exports = ({ siteUrl = 'https://theme-rocket.netlify.com', title = 'Gatsb
     {
       resolve: 'gatsby-plugin-feed',
     },
+    'gatsby-plugin-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-postcss',
