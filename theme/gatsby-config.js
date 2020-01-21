@@ -18,6 +18,13 @@ module.exports = ({ siteUrl = 'https://theme-rocket.netlify.com', title = 'Gatsb
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: path.resolve('static'),
+        name: 'assets',
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
