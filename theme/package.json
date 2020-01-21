@@ -35,7 +35,7 @@
     "gatsby-plugin-page-creator": "^2.1.38",
     "gatsby-plugin-postcss": "^2.1.19",
     "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-sharp": "^2.3.13",
+    "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-sitemap": "^2.2.26",
     "gatsby-remark-autolink-headers": "^2.1.23",
     "gatsby-remark-images": "^3.1.42",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.0",
-    "gatsby": "^2.18.25",
+    "gatsby": "^2.19.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -61,7 +61,7 @@
     "remark-preset-lint-recommended": "^3.0.3"
   },
   "peerDependencies": {
-    "gatsby": "^2.18.25",
+    "gatsby": "^2.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
