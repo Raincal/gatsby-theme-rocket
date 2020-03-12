@@ -17,7 +17,7 @@ jobs:
       - name: yarn install, build
         run: |
           yarn
-          yarn build:cdn
+          YUQUE_TOKEN=${{ secrets.YUQUE_TOKEN }} yarn build:cdn
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
