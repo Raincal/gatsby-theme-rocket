@@ -26,4 +26,4 @@ jobs:
           FOLDER: 'site/public'
       - name: deploy to zeit
         run: |
-          npx now site/public --prod --token ${{ secrets.ZEIT_TOKEN }}
+          npx now site/public --prod --token ${{ secrets.ZEIT_TOKEN }} --confirm
