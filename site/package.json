@@ -19,7 +19,7 @@
     "gatsby-source-yuque": "^0.4.0",
     "gatsby-theme-rocket": "*",
     "preact": "^10.3.4",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
