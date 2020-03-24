@@ -58,7 +58,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "remark-cli": "^7.0.1",
-    "remark-preset-lint-recommended": "^3.0.3"
+    "remark-preset-lint-recommended": "^3.0.4"
   },
   "peerDependencies": {
     "gatsby": "^2.19.45",
