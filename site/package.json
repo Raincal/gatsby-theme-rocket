@@ -14,7 +14,7 @@
     "clean": "rm -rf .cache ../public"
   },
   "dependencies": {
-    "gatsby": "^2.20.14",
+    "gatsby": "^2.20.20",
     "gatsby-plugin-preact": "^3.2.1",
     "gatsby-source-yuque": "^0.4.0",
     "gatsby-theme-rocket": "*",
