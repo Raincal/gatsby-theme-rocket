@@ -54,7 +54,7 @@
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.0",
     "gatsby": "^2.23.3",
-    "prettier": "^2.0.5",
+    "prettier": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "remark-cli": "^8.0.0",
