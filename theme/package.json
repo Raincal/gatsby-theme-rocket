@@ -51,7 +51,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
+    "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.20.0",
     "gatsby": "^2.23.3",
     "prettier": "^2.0.5",
