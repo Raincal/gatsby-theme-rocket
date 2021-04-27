@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react'
-import styles from 'styles/intro.module.css'
+import * as styles from 'styles/intro.module.css'
 
 const Intro = ({ tag }) => (
   <h1 className={styles.intro}>

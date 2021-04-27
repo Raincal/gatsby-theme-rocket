@@ -14,12 +14,14 @@
     "clean": "rm -rf .cache ../public"
   },
   "dependencies": {
-    "gatsby": "^2.23.3",
-    "gatsby-plugin-preact": "^4.0.3",
+    "gatsby": "^3.3.1",
+    "gatsby-plugin-postcss": "^4.3.0",
+    "gatsby-plugin-preact": "^5.3.0",
     "gatsby-source-yuque": "^0.4.0",
     "gatsby-theme-rocket": "*",
-    "preact": "^10.4.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "postcss": "^8.2.13",
+    "preact": "^10.5.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

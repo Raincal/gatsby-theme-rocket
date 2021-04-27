@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import styles from 'styles/posts.module.css'
+import * as styles from 'styles/posts.module.css'
 import Title from '../components/Posts/Title'
 import SEO from '../components/Seo'
 import Tag from '../components/Tag'

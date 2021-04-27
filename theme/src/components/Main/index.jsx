@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/main.module.css'
+import * as styles from 'styles/main.module.css'
 
 const Main = ({ children }) => (
   <div

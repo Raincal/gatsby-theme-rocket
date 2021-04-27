@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/posts.module.css'
+import * as styles from 'styles/posts.module.css'
 import Title from '../Posts/Title'
 import SEO from '../Seo'
 

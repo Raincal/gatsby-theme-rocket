@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import styles from 'styles/profile.module.css'
+import * as styles from 'styles/profile.module.css'
 import avatar from '../../images/avatar.svg'
 
 const Profile = ({ title }) => (

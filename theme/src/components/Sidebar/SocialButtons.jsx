@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from 'styles/buttons.module.css'
+import * as styles from 'styles/buttons.module.css'
 import Link from './Link'
 
 const SocialButtons = ({ data }) => (

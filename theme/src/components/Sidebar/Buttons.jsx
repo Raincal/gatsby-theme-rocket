@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import styles from 'styles/buttons.module.css'
+import * as styles from 'styles/buttons.module.css'
 
 const Buttons = ({ data }) => (
   <ul className={styles.buttons}>
