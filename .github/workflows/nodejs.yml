@@ -26,4 +26,4 @@ jobs:
           folder: 'site/public'
       - name: deploy to vercel
         run: |
-          npx vercel site/public --prod --token ${{ secrets.ZEIT_TOKEN }} --confirm
+          npx vercel site/public --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm
