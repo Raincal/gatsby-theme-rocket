@@ -46,7 +46,7 @@
     "gatsby-transformer-yaml": "^3.3.0",
     "lodash": "^4.17.21",
     "postcss": "^8.2.13",
-    "postcss-import": "^14.0.1",
+    "postcss-import": "^14.1.0",
     "postcss-preset-env": "^6.7.0",
     "preact-render-to-string": "^5.1.19",
     "prismjs": "^1.23.0",
