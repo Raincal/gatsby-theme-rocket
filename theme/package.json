@@ -23,7 +23,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.11.6",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-brotli": "^2.0.0",
     "gatsby-plugin-catch-links": "^3.3.0",
